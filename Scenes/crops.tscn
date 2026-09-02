@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dr2dqcd1jja5d"]
+
+[ext_resource type="Script" uid="uid://4sq3qghoj75j" path="res://Scripts/crop.gd" id="1_3jk42"]
+[ext_resource type="Texture2D" uid="uid://bx272f4dqggk6" path="res://Assets/Crops/pumpkin_crop.png" id="2_1sjif"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo5g5"]
+atlas = ExtResource("2_1sjif")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olfyc"]
+atlas = ExtResource("2_1sjif")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n37hk"]
+atlas = ExtResource("2_1sjif")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnwh1"]
+atlas = ExtResource("2_1sjif")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcch8"]
+atlas = ExtResource("2_1sjif")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21xkr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo5g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olfyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n37hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnwh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcch8")
+}],
+"loop": true,
+"name": &"full_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo5g5")
+}],
+"loop": true,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olfyc")
+}],
+"loop": true,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n37hk")
+}],
+"loop": true,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnwh1")
+}],
+"loop": true,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcch8")
+}],
+"loop": true,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[node name="Crop" type="Node2D" unique_id=489149136]
+script = ExtResource("1_3jk42")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1340793404]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_21xkr")
+animation = &"stage_0"
+
+[node name="Water" type="ColorRect" parent="." unique_id=1603003859]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(0, 0, 0, 0.13725491)

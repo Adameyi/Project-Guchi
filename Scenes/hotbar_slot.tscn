@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://d1hxwei1ovg0x"]
+
+[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/inventory-slot.png" id="1_88t43"]
+[ext_resource type="Texture2D" uid="uid://crrq8jvdjeyi6" path="res://Assets/inventory-slot-selected.png" id="2_ngfs0"]
+[ext_resource type="Texture2D" uid="uid://412lofy1hc5q" path="res://Assets/inventory-slot-hovered.png" id="3_pg0sn"]
+[ext_resource type="Script" uid="uid://du7nqss5o5yev" path="res://Scripts/slots.gd" id="4_b8ycd"]
+
+[node name="Slot" type="TextureButton" unique_id=1290934602]
+texture_filter = 1
+texture_normal = ExtResource("1_88t43")
+texture_pressed = ExtResource("2_ngfs0")
+texture_hover = ExtResource("3_pg0sn")
+script = ExtResource("4_b8ycd")
+texture_selected = ExtResource("2_ngfs0")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1916651619]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1262080808]
+layout_mode = 2
+
+[node name="count" type="Label" parent="CenterContainer/Panel" unique_id=1437734902]
+z_index = 99
+layout_mode = 0
+offset_left = -1.0
+offset_right = 7.0
+offset_bottom = 9.0
+theme_override_font_sizes/font_size = 5
+text = "99"
+horizontal_alignment = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1401751223]

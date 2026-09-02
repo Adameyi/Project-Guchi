@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c5qu3yocgtyx3"]
+
+[ext_resource type="Script" uid="uid://b6mnumqyva4s3" path="res://Scripts/apple_tree.gd" id="1_5ilwl"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://inventory/item_inventory.gd" id="2_5ud2y"]
+[ext_resource type="Texture2D" uid="uid://bhorpvktikasv" path="res://Assets/apple.png" id="3_7f8jy"]
+[ext_resource type="Texture2D" uid="uid://63gwpd3p0fqn" path="res://Assets/placeholder_appletree.png" id="4_7f8jy"]
+[ext_resource type="Texture2D" uid="uid://d08wbh8tjebsy" path="res://Assets/placeholder_tree.png" id="4_ucymx"]
+[ext_resource type="PackedScene" uid="uid://khu5jd8mm5c0" path="res://Scenes/apple_collectable.tscn" id="6_ucymx"]
+
+[sub_resource type="Resource" id="Resource_6bp64"]
+script = ExtResource("2_5ud2y")
+name = "apple"
+texture = ExtResource("3_7f8jy")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahspy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7f8jy")
+}],
+"loop": true,
+"name": &"apples",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ucymx")
+}],
+"loop": true,
+"name": &"no_apples",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7f8jy"]
+radius = 10.5
+
+[node name="Tree" type="Node2D" unique_id=531084989]
+script = ExtResource("1_5ilwl")
+item = SubResource("Resource_6bp64")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=230713146]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=457790904]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ahspy")
+animation = &"no_apples"
+autoplay = "no_apples"
+
+[node name="pickable_area" type="Area2D" parent="." unique_id=1399642181]
+position = Vector2(104, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area" unique_id=1580074511]
+position = Vector2(-104, -120)
+shape = SubResource("CircleShape2D_7f8jy")
+
+[node name="AppleCollectable" parent="." unique_id=1284343304 instance=ExtResource("6_ucymx")]
+position = Vector2(0, 18)
+
+[node name="growth_timer" type="Timer" parent="." unique_id=115863218]
+wait_time = 3.0
+
+[connection signal="body_shape_entered" from="pickable_area" to="." method="_on_pickable_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="pickable_area" to="." method="_on_pickable_area_body_shape_exited"]
+[connection signal="timeout" from="growth_timer" to="." method="_on_growth_timer_timeout"]

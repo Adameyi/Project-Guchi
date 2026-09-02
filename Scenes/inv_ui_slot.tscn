@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b4l00kbluag0d"]
+
+[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/inventory-slot.png" id="1_3fq4t"]
+[ext_resource type="Script" uid="uid://counmf11inn6s" path="res://Scripts/inv_ui_slot.gd" id="1_dvbtt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dvbtt"]
+line_spacing = 0.0
+font_size = 5
+
+[node name="inv_UI_slot" type="Control" unique_id=426813291]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -304.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dvbtt")
+
+[node name="slot_display" type="Sprite2D" parent="." unique_id=129775027]
+texture_filter = 1
+texture = ExtResource("1_3fq4t")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1460178494]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=490468283]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel" unique_id=30275164]
+unique_name_in_owner = true
+
+[node name="count" type="Label" parent="CenterContainer/Panel" unique_id=1085364527]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1.0
+offset_right = 7.0
+offset_bottom = 8.0
+text = "99"
+label_settings = SubResource("LabelSettings_dvbtt")
+horizontal_alignment = 2
