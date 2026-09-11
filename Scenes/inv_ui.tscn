@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cw6iurwtpwn58"]
 
 [ext_resource type="Script" uid="uid://d288cpklc2bpo" path="res://Scripts/inv_ui.gd" id="1_cshhv"]
-[ext_resource type="Texture2D" uid="uid://5aum8eabmp6u" path="res://Assets/inventory-background.png" id="2_owgac"]
+[ext_resource type="Texture2D" uid="uid://5aum8eabmp6u" path="res://Assets/PlayerUI/inventory-background.png" id="2_owgac"]
 [ext_resource type="PackedScene" uid="uid://b4l00kbluag0d" path="res://Scenes/inv_ui_slot.tscn" id="3_khj2i"]
 
 [node name="Inv_UI" type="Control" unique_id=712300596]
@@ -16,7 +16,7 @@ script = ExtResource("1_cshhv")
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=765263621]
 texture_filter = 1
 layout_mode = 0
-offset_right = 87.0
+offset_right = 150.0
 offset_bottom = 65.0
 texture = ExtResource("2_owgac")
 patch_margin_left = 6
@@ -31,13 +31,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
+offset_left = -68.0
 offset_top = -28.0
-offset_right = 38.0
+offset_right = 68.0
 offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
+columns = 7
 
 [node name="inv_UI_slot" parent="NinePatchRect/GridContainer" unique_id=426813291 instance=ExtResource("3_khj2i")]
 layout_mode = 2
@@ -73,4 +73,31 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="inv_UI_slot12" parent="NinePatchRect/GridContainer" unique_id=1209902964 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot13" parent="NinePatchRect/GridContainer" unique_id=806074197 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot14" parent="NinePatchRect/GridContainer" unique_id=1147909603 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot15" parent="NinePatchRect/GridContainer" unique_id=123290296 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot16" parent="NinePatchRect/GridContainer" unique_id=52426594 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot17" parent="NinePatchRect/GridContainer" unique_id=133818794 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot18" parent="NinePatchRect/GridContainer" unique_id=2115888110 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot19" parent="NinePatchRect/GridContainer" unique_id=837553615 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot20" parent="NinePatchRect/GridContainer" unique_id=488960434 instance=ExtResource("3_khj2i")]
+layout_mode = 2
+
+[node name="inv_UI_slot21" parent="NinePatchRect/GridContainer" unique_id=1216080527 instance=ExtResource("3_khj2i")]
 layout_mode = 2

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c5qu3yocgtyx3"]
 
 [ext_resource type="Script" uid="uid://b6mnumqyva4s3" path="res://Scripts/apple_tree.gd" id="1_5ilwl"]
-[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://inventory/item_inventory.gd" id="2_5ud2y"]
-[ext_resource type="Texture2D" uid="uid://bhorpvktikasv" path="res://Assets/apple.png" id="3_7f8jy"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="2_5ud2y"]
+[ext_resource type="Texture2D" uid="uid://bhorpvktikasv" path="res://Assets/Items/apple.png" id="3_7f8jy"]
 [ext_resource type="Texture2D" uid="uid://63gwpd3p0fqn" path="res://Assets/placeholder_appletree.png" id="4_7f8jy"]
 [ext_resource type="Texture2D" uid="uid://d08wbh8tjebsy" path="res://Assets/placeholder_tree.png" id="4_ucymx"]
 

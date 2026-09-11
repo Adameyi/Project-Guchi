@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://71120miaepmp"]
+
+[ext_resource type="Script" uid="uid://d3iekudq0q25c" path="res://Scripts/interaction/door.gd" id="1_77sd8"]
+[ext_resource type="Texture2D" uid="uid://dghmhhpncvmye" path="res://Assets/Interactables/treasure.png" id="1_bsmnj"]
+[ext_resource type="Texture2D" uid="uid://dqrn2udunkik8" path="res://Assets/Interactables/treasure2.png" id="2_77sd8"]
+[ext_resource type="PackedScene" uid="uid://c5r8s81ya3qw0" path="res://Scenes/interaction/interactable.tscn" id="2_yx78l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6h1uq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bsmnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_77sd8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx78l"]
+size = Vector2(18, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_77sd8"]
+radius = 17.0
+
+[node name="TreasureChest" type="StaticBody2D" unique_id=725694195]
+scale = Vector2(2, 2)
+script = ExtResource("1_77sd8")
+initial_scene = &"uid://cnc3k1e7dook5"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=651781976]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6h1uq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740020016]
+shape = SubResource("RectangleShape2D_yx78l")
+
+[node name="Interactable" parent="." unique_id=528876910 instance=ExtResource("2_yx78l")]
+interact_name = "Open Chest"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=479764977]
+shape = SubResource("CircleShape2D_77sd8")

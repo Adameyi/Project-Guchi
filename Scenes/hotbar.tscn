@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bmn5msggsdxqc"]
 
 [ext_resource type="Script" uid="uid://boo6s4fvlvvwo" path="res://Scripts/hotbar.gd" id="1_oyw2r"]
-[ext_resource type="Texture2D" uid="uid://d03xqtgoi7443" path="res://Assets/tool-inventory-background.png" id="2_8pkca"]
+[ext_resource type="Texture2D" uid="uid://d03xqtgoi7443" path="res://Assets/PlayerUI/tool-inventory-background.png" id="2_8pkca"]
 [ext_resource type="Script" uid="uid://els0cwr2pb6f" path="res://Scripts/hotbar_tool.gd" id="2_w22v5"]
-[ext_resource type="Texture2D" uid="uid://d3hw06j30tai8" path="res://Assets/tool-inventory-indicator-up.png" id="4_ojcin"]
+[ext_resource type="Texture2D" uid="uid://d3hw06j30tai8" path="res://Assets/PlayerUI/tool-inventory-indicator-up.png" id="4_ojcin"]
 [ext_resource type="Script" uid="uid://c324w4u8m0a62" path="res://Scripts/hotbar_tool_indicator_up.gd" id="4_oyw2r"]
 [ext_resource type="Script" uid="uid://de07pau6l11rg" path="res://Scripts/hotbar_tool_indicator_down.gd" id="5_77bah"]
-[ext_resource type="Texture2D" uid="uid://c7xksi7qmxid7" path="res://Assets/tool-inventory-indicator-down.png" id="6_jf02k"]
+[ext_resource type="Texture2D" uid="uid://c7xksi7qmxid7" path="res://Assets/PlayerUI/tool-inventory-indicator-down.png" id="6_jf02k"]
 
 [node name="Hotbar" type="Control" unique_id=1332964]
 layout_mode = 3

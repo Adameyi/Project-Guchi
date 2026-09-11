@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d1hxwei1ovg0x"]
 
-[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/inventory-slot.png" id="1_88t43"]
-[ext_resource type="Texture2D" uid="uid://crrq8jvdjeyi6" path="res://Assets/inventory-slot-selected.png" id="2_ngfs0"]
-[ext_resource type="Texture2D" uid="uid://412lofy1hc5q" path="res://Assets/inventory-slot-hovered.png" id="3_pg0sn"]
+[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/PlayerUI/inventory-slot.png" id="1_88t43"]
+[ext_resource type="Texture2D" uid="uid://crrq8jvdjeyi6" path="res://Assets/PlayerUI/inventory-slot-selected.png" id="2_ngfs0"]
+[ext_resource type="Texture2D" uid="uid://412lofy1hc5q" path="res://Assets/PlayerUI/inventory-slot-hovered.png" id="3_pg0sn"]
 [ext_resource type="Script" uid="uid://du7nqss5o5yev" path="res://Scripts/slots.gd" id="4_b8ycd"]
 
 [node name="Slot" type="TextureButton" unique_id=1290934602]

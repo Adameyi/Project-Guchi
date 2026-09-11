@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://khu5jd8mm5c0"]
 
 [ext_resource type="Script" uid="uid://mmhlwv7hidxk" path="res://Scripts/apple_collectable.gd" id="1_ipdwa"]
-[ext_resource type="Texture2D" uid="uid://bhorpvktikasv" path="res://Assets/apple.png" id="1_kb2go"]
+[ext_resource type="Texture2D" uid="uid://bhorpvktikasv" path="res://Assets/Items/apple.png" id="1_kb2go"]
 
 [sub_resource type="Animation" id="Animation_o0bl3"]
 length = 0.001

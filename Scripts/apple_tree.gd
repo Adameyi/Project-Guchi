@@ -21,7 +21,7 @@ func _process(delta):
 		animated_sprite_2d.play('no_apples')
 	if state == 'apples':
 		if player_in_area == true:
-			if Input.is_action_just_pressed('collect_item'):
+			if Input.is_action_just_pressed('interact'):
 				print('Item Collected')
 				state = 'no_apples'
 				drop_apple()

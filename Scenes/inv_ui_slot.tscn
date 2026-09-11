@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4l00kbluag0d"]
 
-[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/inventory-slot.png" id="1_3fq4t"]
+[ext_resource type="Texture2D" uid="uid://cvl4skae4gcqj" path="res://Assets/PlayerUI/inventory-slot.png" id="1_3fq4t"]
 [ext_resource type="Script" uid="uid://counmf11inn6s" path="res://Scripts/inv_ui_slot.gd" id="1_dvbtt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dvbtt"]

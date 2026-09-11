@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bn0qbaa034rm5"]
+
+[ext_resource type="FontFile" uid="uid://b4e6eu65mscyw" path="res://Fonts/SuperFrosting-R9z4o.ttf" id="1_hkgi3"]
+[ext_resource type="Script" uid="uid://bqd7yxucus01n" path="res://Scripts/interaction/interacting_component.gd" id="1_nsw6d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wcss1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nsw6d"]
+font = ExtResource("1_hkgi3")
+font_size = 12
+outline_size = 1
+outline_color = Color(0.2677159, 4.755318e-05, 0.98673207, 1)
+
+[node name="InteractingComponent" type="Node2D" unique_id=1070732642]
+script = ExtResource("1_nsw6d")
+
+[node name="InteractRange" type="Area2D" parent="." unique_id=35670960]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractRange" unique_id=1676247457]
+shape = SubResource("CircleShape2D_wcss1")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1383502711]
+z_index = 10
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -14.0
+offset_right = 71.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 4
+text = "(E) to Interact"
+label_settings = SubResource("LabelSettings_nsw6d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="InteractRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="InteractRange" to="." method="_on_interact_range_area_exited"]

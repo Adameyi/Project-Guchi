@@ -4,10 +4,10 @@ var tools = ['None','Hoe','Watering_Can','Remove']
 var mode = 0
 
 @onready var texture_button: TextureButton = $"."
-@export var hoe_texture: Texture2D = preload("res://Assets/tool-inventory-hoe.png")
-@export var watering_can: Texture2D	= preload("res://Assets/tool-inventory-wateringcan.png")
-@export var remove: Texture2D = preload("res://Assets/tool-inventory-remove.png")
-@export var none: Texture2D = preload("res://Assets/tool-inventory-background.png")
+@export var hoe_texture: Texture2D = preload("res://Assets/PlayerUI/tool-inventory-hoe.png")
+@export var watering_can: Texture2D	= preload("res://Assets/PlayerUI/tool-inventory-wateringcan.png")
+@export var remove: Texture2D = preload("res://Assets/PlayerUI/tool-inventory-remove.png")
+@export var none: Texture2D = preload("res://Assets/PlayerUI/tool-inventory-background.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
