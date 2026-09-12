@@ -1,8 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1789126040
+::res://::1789221188
 appletree_sprite.png::CompressedTexture2D::1145517938433800402::1787881869::1789123231::1::::<><><>0<>0<>27bc8acd47e699bc482f9271bcac4db4<>res://.godot/imported/appletree_sprite.png-ed5f9bb6624e2f6ef7865338331f525b.ctex::
 README.md::TextFile::-1::1788354776::0::1::::<><><>0<>0<><>::
-::res://Assets/::1789123302
+::res://Assets/::1789187312
 placeholder_appletree.png::CompressedTexture2D::2234061113093075385::1787881936::1787881936::1::::<><><>0<>0<>634b95dbcbe01e9aedcf34c4f1d188ba<>res://.godot/imported/placeholder_appletree.png-91f2cc1839c20373cca36ea2b60283d9.ctex::
 placeholder_tree.png::CompressedTexture2D::8983445587066308304::1787614251::1787614251::1::::<><><>0<>0<>f482dac14c28863e32940d6601140f41<>res://.godot/imported/placeholder_tree.png-7cdc9cc999d7ae855bc450032ffdf92b.ctex::
 ::res://Assets/Crops/::1788239050
@@ -17,6 +17,7 @@ banana.png::CompressedTexture2D::5443384709518064406::1787099483::1789123240::1:
 orange.png::CompressedTexture2D::2544933399589448180::1787099476::1789123240::1::::<><><>0<>0<>c7c763ed49435ce79f3f07596d627ffa<>res://.godot/imported/orange.png-d4bb782895871c0e6f45282266d4e613.ctex::
 sunflower_seeds.png::CompressedTexture2D::6488536158494637772::1788311793::1789123240::1::::<><><>0<>0<>4633580fb35f1e2fd76a9ee727e8d8ac<>res://.godot/imported/sunflower_seeds.png-2c5153a0e7c7734ef6b8cee7678a1fa1.ctex::
 watermelon.png::CompressedTexture2D::860368269433988712::1787099479::1789123240::1::::<><><>0<>0<>fe608e473c99e6e352eb448e6345ed96<>res://.godot/imported/watermelon.png-a2d80db194dce29e2f1be82756fd96f6.ctex::
+::res://Assets/Objects/::1789127518
 ::res://Assets/PlayerUI/::1789123151
 inventory-background.png::CompressedTexture2D::2106902817974758366::1787839696::1789123104::1::::<><><>0<>0<>50b1884309b20b030e33a66bc2d8526d<>res://.godot/imported/inventory-background.png-10144f63d69de2bbb138dd977ea4f160.ctex::
 inventory-slot-hovered.png::CompressedTexture2D::2090810033822539180::1787916501::1789123131::1::::<><><>0<>0<>baa98fb326d88bb3fd69e68d1c672655<>res://.godot/imported/inventory-slot-hovered.png-3ed85b9943e5b8e324e04a3677a13a46.ctex::
@@ -30,6 +31,12 @@ tool-inventory-remove.png::CompressedTexture2D::7346124351618219004::1788222943:
 tool-inventory-wateringcan.png::CompressedTexture2D::558397827092204739::1788222858::1789123151::1::::<><><>0<>0<>6e4b42e0aa1fbda4bfe1564e23dae292<>res://.godot/imported/tool-inventory-wateringcan.png-33cce1ea5321f1eab2beaa26ee1f7727.ctex::
 ::res://Assets/SelectionUI/::1788142809
 selection.png::CompressedTexture2D::3438303914624180994::1788142796::1788142809::1::::<><><>0<>0<>b8219edbf96cb82002a490a06598c9c3<>res://.godot/imported/selection.png-61024dd5a6a366f6804796fedd8916e1.ctex::
+::res://Assets/ShopUI/::1789221204
+shop_background.png::CompressedTexture2D::3041114839574504203::1789187332::1789187858::1::::<><><>0<>0<>87f498da8ae5c5f02060adb6a725496b<>res://.godot/imported/shop_background.png-5ed8dfd8a238b63199283669d6f5dae1.ctex::
+shop_buy_button_normal.png::CompressedTexture2D::8331040955424094491::1789221204::1789221205::1::::<><><>0<>0<>4bba6d4fa98b0d8f3379b42b3d0f06cf<>res://.godot/imported/shop_buy_button_normal.png-7738ff1507db2d55736d7d8588a95f75.ctex::
+shop_exit_sign.png::CompressedTexture2D::376541198630414703::1789187848::1789187863::1::::<><><>0<>0<>45485fd236206b59287c17f75ee63e31<>res://.godot/imported/shop_exit_sign.png-39c8055d5b219d48b08c30bec0876cf9.ctex::
+shop_item_panel_hovered.png::CompressedTexture2D::7526125105950378841::1789189338::1789189339::1::::<><><>0<>0<>2a70bb652b316ecc946a0926be36b95a<>res://.godot/imported/shop_item_panel_hovered.png-2808db41e9b3488b3ef7d4191d318a30.ctex::
+shop_item_panel_normal.png::CompressedTexture2D::7967655138616009326::1789189338::1789189339::1::::<><><>0<>0<>138b17589787732edb301cbe6d145ba2<>res://.godot/imported/shop_item_panel_normal.png-d385a8004f19ab7cfbfe4f99e2e11ffd.ctex::
 ::res://Assets/Spritesheets/::1789123277
 catidle_animation.png::CompressedTexture2D::2810648226828768850::1787089429::1789123277::1::::<><><>0<>0<>d6c17423e06e7a79109b3933b3b54f7c<>res://.godot/imported/catidle_animation.png-d305681de0f4f40cd645573bb4d2aba0.ctex::
 catrun_animation.png::CompressedTexture2D::8678000690110387499::1787089612::1789123277::1::::<><><>0<>0<>cbdbfe41cc60a83182f524ac6b9f5ed7<>res://.godot/imported/catrun_animation.png-21f7a12d76168898260affa8091e14be.ctex::
@@ -47,13 +54,13 @@ Wooden_House_Roof_Tilset.png::CompressedTexture2D::4681087601954602483::17891187
 Wooden_House_Walls_Tilset.png::CompressedTexture2D::1218397452380877538::1789118787::1789118822::1::::<><><>0<>0<>dda0e3bd03c9b1085dfc5045c8c18b64<>res://.godot/imported/Wooden_House_Walls_Tilset.png-f159765bc32ee838651ecf3eb887c8e4.ctex::
 ::res://Fonts/::1789121204
 SuperFrosting-R9z4o.ttf::FontFile::4432045129899408414::1789121204::1789121204::1::::<><><>0<>0<>9a4783d35368a588e7e57fdfc9c12484<>res://.godot/imported/SuperFrosting-R9z4o.ttf-6b2e2a3f15c886aff1a551a75df2b8ee.fontdata::
-::res://Inventory/::1789123104
+::res://Inventory/::1789220236
 item_inventory.gd::GDScript::6271576809802889527::1787614613::0::1::::Inventory_Item<>Resource<><>0<>0<><>::
-player_inventory.tres::Resource/Inventory::5649182158719492373::1789123104::0::1::::<><><>0<>0<><>::uid://c2fmvl26hkprc::::res://Scripts/inv_slot.gd<>uid://dx11qcwwrpo2v::::res://Scripts/inventory.gd
+player_inventory.tres::Resource/Inventory::5649182158719492373::1789220236::0::1::::<><><>0<>0<><>::uid://c2fmvl26hkprc::::res://Scripts/inv_slot.gd<>uid://dx11qcwwrpo2v::::res://Scripts/inventory.gd
 ::res://Inventory/items/::1789123240
 apple.tres::Resource/inventory_item::9159974870799885733::1789123223::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png
 sunflower_seed.tres::Resource/Inventory_Item::5618223982715794908::1789123240::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png
-::res://Scenes/::1789126151
+::res://Scenes/::1789220236
 apple_collectable.tscn::PackedScene::717607473191694421::1789123223::0::1::::<><><>0<>0<><>::uid://mmhlwv7hidxk::::res://Scripts/apple_collectable.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png
 crops.tscn::PackedScene::8408421426841061719::1788315301::0::1::::<><><>0<>0<><>::uid://4sq3qghoj75j::::res://Scripts/crop.gd<>uid://bx272f4dqggk6::::res://Assets/Crops/pumpkin_crop.png
 hotbar.tscn::PackedScene::3257367612448060150::1789123151::0::1::::<><><>0<>0<><>::uid://boo6s4fvlvvwo::::res://Scripts/hotbar.gd<>uid://d03xqtgoi7443::::res://Assets/PlayerUI/tool-inventory-background.png<>uid://els0cwr2pb6f::::res://Scripts/hotbar_tool.gd<>uid://d3hw06j30tai8::::res://Assets/PlayerUI/tool-inventory-indicator-up.png<>uid://c324w4u8m0a62::::res://Scripts/hotbar_tool_indicator_up.gd<>uid://de07pau6l11rg::::res://Scripts/hotbar_tool_indicator_down.gd<>uid://c7xksi7qmxid7::::res://Assets/PlayerUI/tool-inventory-indicator-down.png
@@ -63,13 +70,13 @@ inv_ui_slot.tscn::PackedScene::4446168401462311757::1789123143::0::1::::<><><>0<
 loading_screen.tscn::PackedScene::9136911096442489925::1789114548::0::1::::<><><>0<>0<><>::uid://jl4tg246juja::::res://scripts/loading_screen.gd
 main.tscn::PackedScene::2905306707316357865::1789126043::0::1::::<><><>0<>0<><>::uid://b11aiqiq3kfqj::::res://Scripts/main.gd<>uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://c5qu3yocgtyx3::::res://Scenes/trees.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://71120miaepmp::::res://Scenes/interaction/treasure_chest.tscn
 player.tscn::PackedScene::2351291673900278274::1789124210::0::1::::<><><>0<>0<><>::uid://dvy8nomcs7l03::::res://Scripts/player.gd<>uid://6qgie7lriv3w::::res://Scripts/run.gd<>uid://bgbq73kdtqrhq::::res://Assets/Spritesheets/catidle_animation.png<>uid://cmqrg70nkd0ij::::res://Inventory/player_inventory.tres<>uid://dvvxnyo7a4ptb::::res://Assets/Spritesheets/catrun_animation.png<>uid://cw6iurwtpwn58::::res://Scenes/inv_ui.tscn<>uid://bmn5msggsdxqc::::res://Scenes/hotbar.tscn<>uid://bn0qbaa034rm5::::res://Scenes/interaction/interacting_component.tscn
-shop.tscn::PackedScene::5691144397170083402::1789126151::0::1::::<><><>0<>0<><>::uid://8q8ovqelp60m::::res://Scenes/player.tscn
-terrain.tscn::PackedScene::8328180761997189070::1789124824::0::1::::<><><>0<>0<><>::uid://bwc0ph3t3cx1p::::res://Scripts/terrain_hover.gd<>uid://btbom0j4xg5uf::::res://Assets/Tilemap/grass.png<>uid://dr2dqcd1jja5d::::res://Scenes/crops.tscn<>uid://djghn3wbgbp7s::::res://Assets/Tilemap/plains.png<>uid://bo8sml1rr3knq::::res://Assets/SelectionUI/selection.png<>uid://digliatosobmj::::res://Assets/Tilemap/Wooden House.png<>uid://b7xs3ggv4dmb0::::res://Assets/Tilemap/Wooden_House_Roof_Tilset.png<>uid://rmg3fg6ego71::::res://Assets/Tilemap/Wooden_House_Walls_Tilset.png
+shop.tscn::PackedScene::5691144397170083402::1789220236::0::1::::<><><>0<>0<><>::uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://bjleym7ylox5t::::res://Assets/ShopUI/shop_background.png<>uid://dlrud7e82kvdu::::res://Assets/ShopUI/shop_item_panel_normal.png<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png<>uid://fmntw1p538j0::::res://Assets/ShopUI/shop_exit_sign.png<>uid://c8xwl7pnectir::::res://Assets/ShopUI/shop_buy_button_normal.png<>uid://dpnprch7j6pmt::::res://Assets/ShopUI/shop_buy_button_clicked.png
+terrain.tscn::PackedScene::8328180761997189070::1789128131::0::1::::<><><>0<>0<><>::uid://bwc0ph3t3cx1p::::res://Scripts/terrain_hover.gd<>uid://btbom0j4xg5uf::::res://Assets/Tilemap/grass.png<>uid://dr2dqcd1jja5d::::res://Scenes/crops.tscn<>uid://djghn3wbgbp7s::::res://Assets/Tilemap/plains.png<>uid://bo8sml1rr3knq::::res://Assets/SelectionUI/selection.png<>uid://digliatosobmj::::res://Assets/Tilemap/Wooden House.png<>uid://b7xs3ggv4dmb0::::res://Assets/Tilemap/Wooden_House_Roof_Tilset.png<>uid://rmg3fg6ego71::::res://Assets/Tilemap/Wooden_House_Walls_Tilset.png
 trees.tscn::PackedScene::6912802344964125890::1789123223::0::1::::<><><>0<>0<><>::uid://b6mnumqyva4s3::::res://Scripts/apple_tree.gd<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png<>uid://63gwpd3p0fqn::::res://Assets/placeholder_appletree.png<>uid://d08wbh8tjebsy::::res://Assets/placeholder_tree.png
-::res://Scenes/interaction/::1789126137
+::res://Scenes/interaction/::1789126338
 interactable.tscn::PackedScene::6915638677924810789::1789123938::0::1::::<><><>0<>0<><>::uid://ck5exvy78tk2u::::res://Scripts/interaction/interactable.gd
 interacting_component.tscn::PackedScene::3351458353691647682::1789124346::0::1::::<><><>0<>0<><>::uid://b4e6eu65mscyw::::res://Fonts/SuperFrosting-R9z4o.ttf<>uid://bqd7yxucus01n::::res://Scripts/interaction/interacting_component.gd
-treasure_chest.tscn::PackedScene::2301345008255015683::1789126338::0::1::::<><><>0<>0<><>::uid://d3iekudq0q25c::::res://Scripts/interaction/treasure_chest.gd<>uid://dghmhhpncvmye::::res://Assets/Interactables/treasure.png<>uid://dqrn2udunkik8::::res://Assets/Interactables/treasure2.png<>uid://c5r8s81ya3qw0::::res://Scenes/interaction/interactable.tscn
+treasure_chest.tscn::PackedScene::2301345008255015683::1789126338::0::1::::<><><>0<>0<><>::uid://d3iekudq0q25c::::res://Scripts/interaction/door.gd<>uid://dghmhhpncvmye::::res://Assets/Interactables/treasure.png<>uid://dqrn2udunkik8::::res://Assets/Interactables/treasure2.png<>uid://c5r8s81ya3qw0::::res://Scenes/interaction/interactable.tscn
 ::res://Scripts/::1789123831
 apple_collectable.gd::GDScript::867484508805627540::1787954937::0::1::::<>Node2D<><>0<>0<><>::
 apple_tree.gd::GDScript::4587873062420504004::1789123831::0::1::::<>Node2D<><>0<>0<><>::
@@ -91,7 +98,7 @@ slots.gd::GDScript::8629917880188066573::1788311126::0::1::::<>TextureButton<><>
 terrain_hover.gd::GDScript::3936249122784439311::1788396579::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Scripts/autoloads/::1789114585
 scene_loader.gd::GDScript::6628163680246409672::1789114585::0::1::::<>Node<><>0<>0<><>::
-::res://Scripts/interaction/::1789126041
+::res://Scripts/interaction/::1789126338
+door.gd::GDScript::9141326476749255354::1789126041::0::1::::<>StaticBody2D<><>0<>0<><>::
 interactable.gd::GDScript::5536946219183648634::1789120630::0::1::::<>Area2D<><>0<>0<><>::
 interacting_component.gd::GDScript::3517622357037519349::1789124346::0::1::::<>Node2D<><>0<>0<><>::
-treasure_chest.gd::GDScript::9141326476749255354::1789126041::0::1::::<>StaticBody2D<><>0<>0<><>::
