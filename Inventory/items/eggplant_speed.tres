@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://dfct4w25hedio"]
+
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_ajirp"]
+[ext_resource type="Texture2D" uid="uid://bywfo4v3fxmpn" path="res://Assets/Items/eggplant_seeds.png" id="1_nlqcj"]
+
+[resource]
+script = ExtResource("1_ajirp")
+id = &"bywfo4v3fxmpn"
+display_name = "Eggplant Seeds"
+icon = ExtResource("1_nlqcj")
+price = 5.0
+stock = 50

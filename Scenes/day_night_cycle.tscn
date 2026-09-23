@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bkutpi2c12djh"]
+
+[ext_resource type="PackedScene" uid="uid://0420ixddrwcc" path="res://Scenes/day_night_panel.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" path="res://Scenes/components/day_night_cycle_component.tscn" id="1_jjvhh"]
+
+[node name="DayNightCycle" type="Node2D" unique_id=441396577]
+
+[node name="DayNightCycleComponent" parent="." unique_id=1812259908 instance=ExtResource("1_jjvhh")]
+
+[node name="GameScreen" type="CanvasLayer" parent="." unique_id=1359676384]
+
+[node name="DayNightPanel" parent="GameScreen" unique_id=927985485 instance=ExtResource("1_jjgbg")]
+offset_left = -87.0
+offset_top = 5.0
+offset_right = -6.0
+offset_bottom = 85.0

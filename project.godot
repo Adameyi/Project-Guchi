@@ -17,6 +17,9 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 SceneLoader="*uid://c1oy5f4oocvlo"
+DayNightCycleManager="*uid://wpikcw6yqnxt"
+DayNightCycle="*uid://wpikcw6yqnxt"
+Economy="*uid://dy6ayg677fq0w"
 
 [display]
 
@@ -24,7 +27,6 @@ window/size/viewport_width=320
 window/size/viewport_height=180
 window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 

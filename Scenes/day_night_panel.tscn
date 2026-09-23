@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://0420ixddrwcc"]
+
+[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/TimeUI/Sprite sheet for Basic Pack.png" id="1_a0lns"]
+[ext_resource type="FontFile" uid="uid://c8rna1hw7unk" path="res://Fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_17k6u"]
+[ext_resource type="Script" uid="uid://mjyno2obelk7" path="res://Scripts/ui/day_night_panel.gd" id="3_17k6u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4baab"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukaog"]
+atlas = SubResource("CompressedTexture2D_4baab")
+region = Rect2(59, 11, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l723k"]
+texture = SubResource("AtlasTexture_ukaog")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4mdv2"]
+texture = SubResource("AtlasTexture_ukaog")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwbvt"]
+texture = SubResource("AtlasTexture_ukaog")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cys4"]
+atlas = ExtResource("1_a0lns")
+region = Rect2(59, 155, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6hkh"]
+texture = SubResource("AtlasTexture_5cys4")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3x4b0"]
+texture = SubResource("AtlasTexture_ukaog")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbxt0"]
+atlas = ExtResource("1_a0lns")
+region = Rect2(503.83698, 130.71341, 35.40692, 18.28659)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fduu"]
+texture = SubResource("AtlasTexture_pbxt0")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="Theme" id="Theme_k03v6"]
+DayAndNightButton/base_type = &"Button"
+DayAndNightButton/styles/disabled = SubResource("StyleBoxTexture_l723k")
+DayAndNightButton/styles/focus = SubResource("StyleBoxTexture_4mdv2")
+DayAndNightButton/styles/hover = SubResource("StyleBoxTexture_qwbvt")
+DayAndNightButton/styles/normal = SubResource("StyleBoxTexture_p6hkh")
+DayAndNightButton/styles/pressed = SubResource("StyleBoxTexture_3x4b0")
+DayAndNightCounterPanel/base_type = &"PanelContainer"
+DayAndNightCounterPanel/styles/panel = SubResource("StyleBoxTexture_2fduu")
+DayAndNightLabel/base_type = &"Label"
+DayAndNightLabel/font_sizes/font_size = 21
+DayAndNightLabel/fonts/font = ExtResource("2_17k6u")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0lns"]
+atlas = ExtResource("1_a0lns")
+region = Rect2(261, 2, 7, 12)
+
+[node name="DayNightPanel" type="Control" unique_id=927985485]
+custom_minimum_size = Vector2(42, 54)
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 54.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_k03v6")
+script = ExtResource("3_17k6u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1876541416]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_constants/separation = 1
+
+[node name="DayPanel" type="PanelContainer" parent="VBoxContainer" unique_id=882839569]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/DayPanel" unique_id=104482837]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="DayLabel" type="Label" parent="VBoxContainer/DayPanel/MarginContainer" unique_id=1225611031]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+theme_override_font_sizes/font_size = 12
+text = "DAY 0"
+
+[node name="TimePanel" type="PanelContainer" parent="VBoxContainer" unique_id=391238721]
+texture_filter = 1
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 2
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TimePanel" unique_id=398202425]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/TimePanel/MarginContainer" unique_id=603448284]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+theme_override_font_sizes/font_size = 12
+text = "00:00"
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=663188968]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NormalSpeed" type="Button" parent="VBoxContainer/Control" unique_id=1957331021]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 13.0
+offset_bottom = 5.0
+grow_vertical = 2
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/NormalSpeed" unique_id=1632964254]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = -3.0
+offset_right = 3.5
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_a0lns")
+expand_mode = 1
+
+[node name="FastSpeedButton" type="Button" parent="VBoxContainer/Control" unique_id=1574811712]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"DayAndNightButton"
+
+[node name="DoubleSpeedButton" type="Button" parent="VBoxContainer/Control" unique_id=1605636262]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -5.0
+offset_right = -2.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_type_variation = &"DayAndNightButton"
+
+[node name="MoneyPanel" type="PanelContainer" parent="VBoxContainer" unique_id=161681938]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MoneyPanel" unique_id=795047014]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="PlayerMoney" type="Label" parent="VBoxContainer/MoneyPanel/MarginContainer" unique_id=1094136062]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_17k6u")
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[connection signal="pressed" from="VBoxContainer/Control/NormalSpeed" to="." method="_on_normal_speed_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control/FastSpeedButton" to="." method="_on_fast_speed_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control/DoubleSpeedButton" to="." method="_on_double_speed_button_pressed"]

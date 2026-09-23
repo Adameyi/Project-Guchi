@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://dwa02b1rvhvur"]
+
+[ext_resource type="Texture2D" uid="uid://c287bixg6u7oj" path="res://Assets/Items/blueberry_seeds.png" id="1_7ubor"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_ck622"]
+
+[resource]
+script = ExtResource("1_ck622")
+id = &"dwa02b1rvhvur"
+display_name = "Blueberry Seeds"
+icon = ExtResource("1_7ubor")
+price = 5.0
+stock = 20

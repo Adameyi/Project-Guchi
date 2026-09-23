@@ -71,7 +71,7 @@ func plant_seed(tile_coords: Vector2i):
 			crop.grow()
 			return
 		
-		var slot = inventory.slots[hotbar_slots.seleected_index]
+		var slot = inventory.slots[hotbar_slots.selected_index]
 		if slot.item == SUNFLOWER_SEED and slot.amount > 0:
 			slot.amount -= 1
 			if slot.amount <= 0:

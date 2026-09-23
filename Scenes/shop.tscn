@@ -2,11 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://8q8ovqelp60m" path="res://Scenes/player.tscn" id="1_a0mxf"]
 [ext_resource type="PackedScene" uid="uid://dqwh6j76folhu" path="res://Scenes/terrain.tscn" id="2_2shtd"]
+[ext_resource type="PackedScene" uid="uid://71120miaepmp" path="res://Scenes/interaction/treasure_chest.tscn" id="3_3mbjb"]
 [ext_resource type="Texture2D" uid="uid://bjleym7ylox5t" path="res://Assets/ShopUI/shop_background.png" id="3_k6jq0"]
+[ext_resource type="Script" uid="uid://trad6e0n1pab" path="res://Scripts/shop/shop.gd" id="3_tyrku"]
 [ext_resource type="Texture2D" uid="uid://dlrud7e82kvdu" path="res://Assets/ShopUI/shop_item_panel_normal.png" id="4_3ps1r"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="4_ow1eo"]
 [ext_resource type="Texture2D" uid="uid://cypdiim6qwvse" path="res://Assets/Items/sunflower_seeds.png" id="5_3ps1r"]
+[ext_resource type="Script" uid="uid://b81x0lkgsavgk" path="res://Scripts/shop/store_item.gd" id="5_5xp22"]
+[ext_resource type="Resource" uid="uid://dwa02b1rvhvur" path="res://Inventory/items/blueberry_seed.tres" id="5_k6pkm"]
 [ext_resource type="Texture2D" uid="uid://fmntw1p538j0" path="res://Assets/ShopUI/shop_exit_sign.png" id="5_ymrm4"]
+[ext_resource type="Resource" uid="uid://b8efd8llg2dkb" path="res://Inventory/items/carrot_seed.tres" id="6_m13ki"]
 [ext_resource type="Texture2D" uid="uid://dqxva6vgftmpf" path="res://Assets/ShopUI/shop_buy_button_normal.png" id="6_s8dlv"]
+[ext_resource type="Resource" uid="uid://bmcrcqb507u1m" path="res://Inventory/items/cauliflower_seed.tres" id="7_3mbjb"]
+[ext_resource type="Resource" uid="uid://dfct4w25hedio" path="res://Inventory/items/eggplant_speed.tres" id="8_jhx1v"]
+[ext_resource type="Resource" uid="uid://cvd8bhcs1q6b6" path="res://Inventory/items/heartberry_seed.tres" id="9_dvu38"]
+[ext_resource type="Resource" uid="uid://c54d76pv4duhw" path="res://Inventory/items/magicberry_seed.tres" id="10_k7yfq"]
+[ext_resource type="Resource" uid="uid://d7jowdq1c12f" path="res://Inventory/items/onion_seed.tres" id="11_6rctg"]
+[ext_resource type="Resource" uid="uid://djnm14pgwbgnu" path="res://Inventory/items/potato_seed.tres" id="12_1shhe"]
+[ext_resource type="Resource" uid="uid://ydcdt8spqdnd" path="res://Inventory/items/pumpkin_seed.tres" id="13_n1qjt"]
+[ext_resource type="Resource" uid="uid://dcgfbp0lcc4vg" path="res://Inventory/items/turnip_seed.tres" id="14_ik0jt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymrm4"]
 
@@ -14,10 +28,16 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tyrku"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5xp22"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-d4fb01e027dec9cd1d1cab4eefe43c81.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow1eo"]
+atlas = SubResource("CompressedTexture2D_5xp22")
+region = Rect2(552.1346, 154.8099, 35.012512, 17.386353)
+
 [node name="Shop" type="Node2D" unique_id=461463162]
 
 [node name="Terrain" parent="." unique_id=1848575161 instance=ExtResource("2_2shtd")]
-visible = false
 
 [node name="Grass" parent="Terrain" index="0" unique_id=1727423642]
 tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAD//wQAAAAAAAAAAAD//wUAAAAAAAAAAAD//wYAAAAAAAAAAAD//wcAAAAAAAAAAAD//wgAAAAAAAAAAAD//wkAAAAAAAAAAAD//woAAAAAAAAAAAD//wsAAAAAAAAAAAD//wwAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAABAAkAAAAAAAAAAAABAAoAAAAAAAAAAAABAAsAAAAAAAAAAAABAAwAAAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAADAAoAAAAAAAAAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAEAAoAAAAAAAAAAAAEAAsAAAAAAAAAAAAEAAwAAAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAAFAAoAAAAAAAAAAAAFAAsAAAAAAAAAAAAFAAwAAAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAGAAoAAAAAAAAAAAAGAAsAAAAAAAAAAAAGAAwAAAAAAAAAAAAHAP//AAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAkAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAwAAAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAAwAAAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAwAAAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAALAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAMAP//AAAAAAAAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAwAAAAAAAAAAAAKAP7/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPr/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD1/wUAAAAAAAAAAAD1/wYAAAAAAAAAAAD1/wcAAAAAAAAAAAD1/wgAAAAAAAAAAAD1/wkAAAAAAAAAAAD1/woAAAAAAAAAAAD1/wsAAAAAAAAAAAD1/wwAAAAAAAAAAAD2//3/AAAAAAAAAAD2//7/AAAAAAAAAAD2////AAAAAAAAAAD2/wAAAAAAAAAAAAD2/wEAAAAAAAAAAAD2/wIAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wQAAAAAAAAAAAD2/wUAAAAAAAAAAAD2/wYAAAAAAAAAAAD2/wcAAAAAAAAAAAD2/wgAAAAAAAAAAAD2/wkAAAAAAAAAAAD2/woAAAAAAAAAAAD2/wsAAAAAAAAAAAD2/wwAAAAAAAAAAAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wUAAAAAAAAAAAD3/wYAAAAAAAAAAAD3/wcAAAAAAAAAAAD3/wgAAAAAAAAAAAD3/wkAAAAAAAAAAAD3/woAAAAAAAAAAAD3/wsAAAAAAAAAAAD3/wwAAAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD4/wUAAAAAAAAAAAD4/wYAAAAAAAAAAAD4/wcAAAAAAAAAAAD4/wgAAAAAAAAAAAD4/wkAAAAAAAAAAAD4/woAAAAAAAAAAAD4/wsAAAAAAAAAAAD4/wwAAAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD5/wYAAAAAAAAAAAD5/wcAAAAAAAAAAAD5/wgAAAAAAAAAAAD5/wkAAAAAAAAAAAD5/woAAAAAAAAAAAD5/wsAAAAAAAAAAAD5/wwAAAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD6/wUAAAAAAAAAAAD6/wYAAAAAAAAAAAD6/wcAAAAAAAAAAAD6/wgAAAAAAAAAAAD6/wkAAAAAAAAAAAD6/woAAAAAAAAAAAD6/wsAAAAAAAAAAAD6/wwAAAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD7/wUAAAAAAAAAAAD7/wYAAAAAAAAAAAD7/wcAAAAAAAAAAAD7/wgAAAAAAAAAAAD7/wkAAAAAAAAAAAD7/woAAAAAAAAAAAD7/wsAAAAAAAAAAAD7/wwAAAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD8/wQAAAAAAAAAAAD8/wUAAAAAAAAAAAD8/wYAAAAAAAAAAAD8/wcAAAAAAAAAAAD8/wgAAAAAAAAAAAD8/wkAAAAAAAAAAAD8/woAAAAAAAAAAAD8/wsAAAAAAAAAAAD8/wwAAAAAAAAAAAD9//3/AAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wQAAAAAAAAAAAD9/wUAAAAAAAAAAAD9/wYAAAAAAAAAAAD9/wcAAAAAAAAAAAD9/wgAAAAAAAAAAAD9/wkAAAAAAAAAAAD9/woAAAAAAAAAAAD9/wsAAAAAAAAAAAD9/wwAAAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wQAAAAAAAAAAAD+/wUAAAAAAAAAAAD+/wYAAAAAAAAAAAD+/wcAAAAAAAAAAAD+/wgAAAAAAAAAAAD+/wkAAAAAAAAAAAD+/woAAAAAAAAAAAD+/wsAAAAAAAAAAAD+/wwAAAAAAAAAAAD///3/AAAAAAAAAAD///7/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP3/AAAAAAAAAAABAP7/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAP7/AAAAAAAAAADv//r/AAAAAAAAAADv//v/AAAAAAAAAADv//z/AAAAAAAAAADv//3/AAAAAAAAAADv//7/AAAAAAAAAADv////AAAAAAAAAADv/wAAAAAAAAAAAADv/wEAAAAAAAAAAADv/wIAAAAAAAAAAADv/wMAAAAAAAAAAADv/wQAAAAAAAAAAADv/wUAAAAAAAAAAADv/wYAAAAAAAAAAADv/wcAAAAAAAAAAADv/wgAAAAAAAAAAADv/wkAAAAAAAAAAADv/woAAAAAAAAAAADv/wsAAAAAAAAAAADv/wwAAAAAAAAAAADv/w0AAAAAAAAAAADv/w4AAAAAAAAAAADv/w8AAAAAAAAAAADv/xAAAAAAAAAAAADv/xEAAAAAAAAAAADw//r/AAAAAAAAAADw//v/AAAAAAAAAADw//z/AAAAAAAAAADw//3/AAAAAAAAAADw//7/AAAAAAAAAADw////AAAAAAAAAADw/wAAAAAAAAAAAADw/wEAAAAAAAAAAADw/wIAAAAAAAAAAADw/wMAAAAAAAAAAADw/wQAAAAAAAAAAADw/wUAAAAAAAAAAADw/wYAAAAAAAAAAADw/wcAAAAAAAAAAADw/wgAAAAAAAAAAADw/wkAAAAAAAAAAADw/woAAAAAAAAAAADw/wsAAAAAAAAAAADw/wwAAAAAAAAAAADw/w0AAAAAAAAAAADw/w4AAAAAAAAAAADw/w8AAAAAAAAAAADw/xAAAAAAAAAAAADw/xEAAAAAAAAAAADx//r/AAAAAAAAAADx//v/AAAAAAAAAADx//z/AAAAAAAAAADx//3/AAAAAAAAAADx//7/AAAAAAAAAADx////AAAAAAAAAADx/wAAAAAAAAAAAADx/wEAAAAAAAAAAADx/wIAAAAAAAAAAADx/wMAAAAAAAAAAADx/wQAAAAAAAAAAADx/wUAAAAAAAAAAADx/wYAAAAAAAAAAADx/wcAAAAAAAAAAADx/wgAAAAAAAAAAADx/wkAAAAAAAAAAADx/woAAAAAAAAAAADx/wsAAAAAAAAAAADx/wwAAAAAAAAAAADx/w0AAAAAAAAAAADx/w4AAAAAAAAAAADx/w8AAAAAAAAAAADx/xAAAAAAAAAAAADx/xEAAAAAAAAAAADy//r/AAAAAAAAAADy//v/AAAAAAAAAADy//z/AAAAAAAAAADy//3/AAAAAAAAAADy//7/AAAAAAAAAADy////AAAAAAAAAADy/wAAAAAAAAAAAADy/wEAAAAAAAAAAADy/wIAAAAAAAAAAADy/wMAAAAAAAAAAADy/wQAAAAAAAAAAADy/wUAAAAAAAAAAADy/wYAAAAAAAAAAADy/wcAAAAAAAAAAADy/wgAAAAAAAAAAADy/wkAAAAAAAAAAADy/woAAAAAAAAAAADy/wsAAAAAAAAAAADy/wwAAAAAAAAAAADy/w0AAAAAAAAAAADy/w4AAAAAAAAAAADy/w8AAAAAAAAAAADy/xAAAAAAAAAAAADy/xEAAAAAAAAAAADz//r/AAAAAAAAAADz//v/AAAAAAAAAADz//z/AAAAAAAAAADz//3/AAAAAAAAAADz//7/AAAAAAAAAADz////AAAAAAAAAADz/wAAAAAAAAAAAADz/wEAAAAAAAAAAADz/wIAAAAAAAAAAADz/wMAAAAAAAAAAADz/wQAAAAAAAAAAADz/wUAAAAAAAAAAADz/wYAAAAAAAAAAADz/wcAAAAAAAAAAADz/wgAAAAAAAAAAADz/wkAAAAAAAAAAADz/woAAAAAAAAAAADz/wsAAAAAAAAAAADz/wwAAAAAAAAAAADz/w0AAAAAAAAAAADz/w4AAAAAAAAAAADz/w8AAAAAAAAAAADz/xAAAAAAAAAAAADz/xEAAAAAAAAAAAD0//r/AAAAAAAAAAD0//v/AAAAAAAAAAD0//z/AAAAAAAAAAD0//3/AAAAAAAAAAD0//7/AAAAAAAAAAD0////AAAAAAAAAAD0/wAAAAAAAAAAAAD0/wEAAAAAAAAAAAD0/wIAAAAAAAAAAAD0/wMAAAAAAAAAAAD0/wQAAAAAAAAAAAD0/wUAAAAAAAAAAAD0/wYAAAAAAAAAAAD0/wcAAAAAAAAAAAD0/wgAAAAAAAAAAAD0/wkAAAAAAAAAAAD0/woAAAAAAAAAAAD0/wsAAAAAAAAAAAD0/wwAAAAAAAAAAAD0/w0AAAAAAAAAAAD0/w4AAAAAAAAAAAD0/w8AAAAAAAAAAAD0/xAAAAAAAAAAAAD0/xEAAAAAAAAAAAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1/w0AAAAAAAAAAAD1/w4AAAAAAAAAAAD1/w8AAAAAAAAAAAD1/xAAAAAAAAAAAAD1/xEAAAAAAAAAAAD2//r/AAAAAAAAAAD2//v/AAAAAAAAAAD2//z/AAAAAAAAAAD2/w0AAAAAAAAAAAD2/w4AAAAAAAAAAAD2/w8AAAAAAAAAAAD2/xAAAAAAAAAAAAD2/xEAAAAAAAAAAAD3//r/AAAAAAAAAAD3//v/AAAAAAAAAAD3//z/AAAAAAAAAAD3/w0AAAAAAAAAAAD3/w4AAAAAAAAAAAD3/w8AAAAAAAAAAAD3/xAAAAAAAAAAAAD3/xEAAAAAAAAAAAD4//r/AAAAAAAAAAD4//v/AAAAAAAAAAD4//z/AAAAAAAAAAD4/w0AAAAAAAAAAAD4/w4AAAAAAAAAAAD4/w8AAAAAAAAAAAD4/xAAAAAAAAAAAAD4/xEAAAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5/w0AAAAAAAAAAAD5/w4AAAAAAAAAAAD5/w8AAAAAAAAAAAD5/xAAAAAAAAAAAAD5/xEAAAAAAAAAAAD6//r/AAAAAAAAAAD6//v/AAAAAAAAAAD6//z/AAAAAAAAAAD6/w0AAAAAAAAAAAD6/w4AAAAAAAAAAAD6/w8AAAAAAAAAAAD6/xAAAAAAAAAAAAD6/xEAAAAAAAAAAAD7//r/AAAAAAAAAAD7//v/AAAAAAAAAAD7//z/AAAAAAAAAAD7/w0AAAAAAAAAAAD7/w4AAAAAAAAAAAD7/w8AAAAAAAAAAAD7/xAAAAAAAAAAAAD7/xEAAAAAAAAAAAD8//r/AAAAAAAAAAD8//v/AAAAAAAAAAD8//z/AAAAAAAAAAD8/w0AAAAAAAAAAAD8/w4AAAAAAAAAAAD8/w8AAAAAAAAAAAD8/xAAAAAAAAAAAAD8/xEAAAAAAAAAAAD9//r/AAAAAAAAAAD9//v/AAAAAAAAAAD9//z/AAAAAAAAAAD9/w0AAAAAAAAAAAD9/w4AAAAAAAAAAAD9/w8AAAAAAAAAAAD9/xAAAAAAAAAAAAD9/xEAAAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD+/w0AAAAAAAAAAAD+/w4AAAAAAAAAAAD+/w8AAAAAAAAAAAD+/xAAAAAAAAAAAAD+/xEAAAAAAAAAAAD///r/AAAAAAAAAAD///v/AAAAAAAAAAD///z/AAAAAAAAAAD//w0AAAAAAAAAAAD//w4AAAAAAAAAAAD//w8AAAAAAAAAAAD//xAAAAAAAAAAAAD//xEAAAAAAAAAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAABEAAAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAABAPz/AAAAAAAAAAABAA0AAAAAAAAAAAABAA4AAAAAAAAAAAABAA8AAAAAAAAAAAABABAAAAAAAAAAAAABABEAAAAAAAAAAAACAPr/AAAAAAAAAAACAPv/AAAAAAAAAAACAPz/AAAAAAAAAAACAA0AAAAAAAAAAAACAA4AAAAAAAAAAAACAA8AAAAAAAAAAAACABAAAAAAAAAAAAACABEAAAAAAAAAAAADAPr/AAAAAAAAAAADAPv/AAAAAAAAAAADAPz/AAAAAAAAAAADAA0AAAAAAAAAAAADAA4AAAAAAAAAAAADAA8AAAAAAAAAAAADABAAAAAAAAAAAAADABEAAAAAAAAAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAAAAAAEAPz/AAAAAAAAAAAEAA0AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA8AAAAAAAAAAAAEABAAAAAAAAAAAAAEABEAAAAAAAAAAAAFAPr/AAAAAAAAAAAFAPv/AAAAAAAAAAAFAPz/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAFAA8AAAAAAAAAAAAFABAAAAAAAAAAAAAFABEAAAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAA0AAAAAAAAAAAAGAA4AAAAAAAAAAAAGAA8AAAAAAAAAAAAGABAAAAAAAAAAAAAGABEAAAAAAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAHAA0AAAAAAAAAAAAHAA4AAAAAAAAAAAAHAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAHABEAAAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAA0AAAAAAAAAAAAIAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAIABAAAAAAAAAAAAAIABEAAAAAAAAAAAAJAPr/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAJAA8AAAAAAAAAAAAJABAAAAAAAAAAAAAJABEAAAAAAAAAAAAKAA0AAAAAAAAAAAAKAA4AAAAAAAAAAAAKAA8AAAAAAAAAAAAKABAAAAAAAAAAAAAKABEAAAAAAAAAAAALAPr/AAAAAAAAAAALAPv/AAAAAAAAAAALAPz/AAAAAAAAAAALAP3/AAAAAAAAAAALAP7/AAAAAAAAAAALAA0AAAAAAAAAAAALAA4AAAAAAAAAAAALAA8AAAAAAAAAAAALABAAAAAAAAAAAAALABEAAAAAAAAAAAAMAPr/AAAAAAAAAAAMAPv/AAAAAAAAAAAMAPz/AAAAAAAAAAAMAP3/AAAAAAAAAAAMAP7/AAAAAAAAAAAMAA0AAAAAAAAAAAAMAA4AAAAAAAAAAAAMAA8AAAAAAAAAAAAMABAAAAAAAAAAAAAMABEAAAAAAAAAAADp//r/AAAAAAAAAADp//v/AAAAAAAAAADp//z/AAAAAAAAAADp//3/AAAAAAAAAADp//7/AAAAAAAAAADp////AAAAAAAAAADp/wAAAAAAAAAAAADp/wEAAAAAAAAAAADp/wIAAAAAAAAAAADp/wMAAAAAAAAAAADp/wQAAAAAAAAAAADp/wUAAAAAAAAAAADp/wYAAAAAAAAAAADp/wcAAAAAAAAAAADp/wgAAAAAAAAAAADp/wkAAAAAAAAAAADp/woAAAAAAAAAAADp/wsAAAAAAAAAAADp/wwAAAAAAAAAAADp/w0AAAAAAAAAAADp/w4AAAAAAAAAAADp/w8AAAAAAAAAAADp/xAAAAAAAAAAAADp/xEAAAAAAAAAAADq//r/AAAAAAAAAADq//v/AAAAAAAAAADq//z/AAAAAAAAAADq//3/AAAAAAAAAADq//7/AAAAAAAAAADq////AAAAAAAAAADq/wAAAAAAAAAAAADq/wEAAAAAAAAAAADq/wIAAAAAAAAAAADq/wMAAAAAAAAAAADq/wQAAAAAAAAAAADq/wUAAAAAAAAAAADq/wYAAAAAAAAAAADq/wcAAAAAAAAAAADq/wgAAAAAAAAAAADq/wkAAAAAAAAAAADq/woAAAAAAAAAAADq/wsAAAAAAAAAAADq/wwAAAAAAAAAAADq/w0AAAAAAAAAAADq/w4AAAAAAAAAAADq/w8AAAAAAAAAAADq/xAAAAAAAAAAAADq/xEAAAAAAAAAAADr//r/AAAAAAAAAADr//v/AAAAAAAAAADr//z/AAAAAAAAAADr//3/AAAAAAAAAADr//7/AAAAAAAAAADr////AAAAAAAAAADr/wAAAAAAAAAAAADr/wEAAAAAAAAAAADr/wIAAAAAAAAAAADr/wMAAAAAAAAAAADr/wQAAAAAAAAAAADr/wUAAAAAAAAAAADr/wYAAAAAAAAAAADr/wcAAAAAAAAAAADr/wgAAAAAAAAAAADr/wkAAAAAAAAAAADr/woAAAAAAAAAAADr/wsAAAAAAAAAAADr/wwAAAAAAAAAAADr/w0AAAAAAAAAAADr/w4AAAAAAAAAAADr/w8AAAAAAAAAAADr/xAAAAAAAAAAAADr/xEAAAAAAAAAAADs//r/AAAAAAAAAADs//v/AAAAAAAAAADs//z/AAAAAAAAAADs//3/AAAAAAAAAADs//7/AAAAAAAAAADs////AAAAAAAAAADs/wAAAAAAAAAAAADs/wEAAAAAAAAAAADs/wIAAAAAAAAAAADs/wMAAAAAAAAAAADs/wQAAAAAAAAAAADs/wUAAAAAAAAAAADs/wYAAAAAAAAAAADs/wcAAAAAAAAAAADs/wgAAAAAAAAAAADs/wkAAAAAAAAAAADs/woAAAAAAAAAAADs/wsAAAAAAAAAAADs/wwAAAAAAAAAAADs/w0AAAAAAAAAAADs/w4AAAAAAAAAAADs/w8AAAAAAAAAAADs/xAAAAAAAAAAAADs/xEAAAAAAAAAAADt//r/AAAAAAAAAADt//v/AAAAAAAAAADt//z/AAAAAAAAAADt//3/AAAAAAAAAADt//7/AAAAAAAAAADt////AAAAAAAAAADt/wAAAAAAAAAAAADt/wEAAAAAAAAAAADt/wIAAAAAAAAAAADt/wMAAAAAAAAAAADt/wQAAAAAAAAAAADt/wUAAAAAAAAAAADt/wYAAAAAAAAAAADt/wcAAAAAAAAAAADt/wgAAAAAAAAAAADt/wkAAAAAAAAAAADt/woAAAAAAAAAAADt/wsAAAAAAAAAAADt/wwAAAAAAAAAAADt/w0AAAAAAAAAAADt/w4AAAAAAAAAAADt/w8AAAAAAAAAAADt/xAAAAAAAAAAAADt/xEAAAAAAAAAAADu//r/AAAAAAAAAADu//v/AAAAAAAAAADu//z/AAAAAAAAAADu//3/AAAAAAAAAADu//7/AAAAAAAAAADu////AAAAAAAAAADu/wAAAAAAAAAAAADu/wEAAAAAAAAAAADu/wIAAAAAAAAAAADu/wMAAAAAAAAAAADu/wQAAAAAAAAAAADu/wUAAAAAAAAAAADu/wYAAAAAAAAAAADu/wcAAAAAAAAAAADu/wgAAAAAAAAAAADu/wkAAAAAAAAAAADu/woAAAAAAAAAAADu/wsAAAAAAAAAAADu/wwAAAAAAAAAAADu/w0AAAAAAAAAAADu/w4AAAAAAAAAAADu/w8AAAAAAAAAAADu/xAAAAAAAAAAAADu/xEAAAAAAAAAAAA=")
@@ -36,8 +56,11 @@ tile_map_data = PackedByteArray("AAD8//7/AAABAAEAAAD9//7/AAABAAEAAAD///7/AAADAAE
 tile_map_data = PackedByteArray()
 
 [node name="Player" parent="." unique_id=1185559558 instance=ExtResource("1_a0mxf")]
-visible = false
 position = Vector2(-21, 35)
+
+[node name="GuchiNPC" parent="." unique_id=725694195 instance=ExtResource("3_3mbjb")]
+position = Vector2(-143, 79)
+scale = Vector2(0.5, 0.5)
 
 [node name="ShopUI" type="CanvasLayer" parent="." unique_id=2125886908]
 
@@ -48,6 +71,8 @@ offset_left = -1.0
 offset_top = 0.5
 offset_right = 320.0
 offset_bottom = 186.0
+script = ExtResource("3_tyrku")
+item_datas = Array[ExtResource("4_ow1eo")]([ExtResource("5_k6pkm"), ExtResource("6_m13ki"), ExtResource("7_3mbjb"), ExtResource("8_jhx1v"), ExtResource("9_dvu38"), ExtResource("10_k7yfq"), ExtResource("11_6rctg"), ExtResource("12_1shhe"), ExtResource("13_n1qjt"), ExtResource("14_ik0jt")])
 
 [node name="ColorRect" type="ColorRect" parent="ShopUI/Shop" unique_id=1573354770]
 layout_mode = 1
@@ -90,12 +115,13 @@ theme_override_constants/separation = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer" unique_id=1198640651]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 0.0
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer" unique_id=713528513]
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.55
@@ -107,20 +133,27 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.6
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ymrm4")
 
-[node name="StoreItemsList" type="GridContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel" unique_id=1950233155]
+[node name="ScrollContainer" type="ScrollContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel" unique_id=1175399096]
+custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
-columns = 4
 
-[node name="StoreItem" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=1985594297]
+[node name="StoreItemsList" type="GridContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer" unique_id=1950233155]
 layout_mode = 2
+columns = 3
+
+[node name="StoreItem" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=1985594297]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 0
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem" unique_id=577543176]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem" unique_id=577543176]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem/StoreItemBackground" unique_id=1680429438]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/StoreItemBackground" unique_id=1680429438]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -131,10 +164,11 @@ offset_left = -11.0
 offset_top = -12.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/margin_right = 6
+theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem/StoreItemBackground/MarginContainer" unique_id=349967087]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/StoreItemBackground/MarginContainer" unique_id=349967087]
+z_index = 80
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -143,7 +177,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem/StoreItemBackground" unique_id=963354178]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/StoreItemBackground" unique_id=963354178]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -157,26 +191,45 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem/StoreItemBackground/MarginContainer2" unique_id=1104013900]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/StoreItemBackground/MarginContainer2" unique_id=1104013900]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem" unique_id=1628602859]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem" unique_id=2086807400]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/HBoxContainer" unique_id=1628602859]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem2" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=399498403]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/HBoxContainer" unique_id=1505425510]
+z_index = 100
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem" unique_id=1182554021]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem2" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=1353132565]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2" unique_id=1474649179]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2" unique_id=1951492005]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2/StoreItemBackground" unique_id=1228547978]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/StoreItemBackground" unique_id=1073738583]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -187,10 +240,10 @@ offset_left = -11.0
 offset_top = -12.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/margin_right = 6
+theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2/StoreItemBackground/MarginContainer" unique_id=1857879994]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/StoreItemBackground/MarginContainer" unique_id=943382789]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -199,7 +252,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2/StoreItemBackground" unique_id=334249109]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/StoreItemBackground" unique_id=201977651]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -213,26 +266,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2/StoreItemBackground/MarginContainer2" unique_id=2045290086]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/StoreItemBackground/MarginContainer2" unique_id=836214099]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem2" unique_id=1777185253]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2" unique_id=868011543]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/HBoxContainer" unique_id=489671110]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem3" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=154082673]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/HBoxContainer" unique_id=1642790678]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2" unique_id=420537579]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem3" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=374935893]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3" unique_id=566749779]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3" unique_id=633414697]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3/StoreItemBackground" unique_id=1673218735]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/StoreItemBackground" unique_id=1661760036]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -246,7 +316,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3/StoreItemBackground/MarginContainer" unique_id=1789912776]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/StoreItemBackground/MarginContainer" unique_id=393667042]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -255,7 +325,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3/StoreItemBackground" unique_id=1916147743]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/StoreItemBackground" unique_id=1533694975]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -269,26 +339,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3/StoreItemBackground/MarginContainer2" unique_id=1238871666]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/StoreItemBackground/MarginContainer2" unique_id=1593546547]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem3" unique_id=868505173]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3" unique_id=903464271]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/HBoxContainer" unique_id=556767555]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem4" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=2008962044]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/HBoxContainer" unique_id=852031981]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3" unique_id=2018507736]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem4" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=829521246]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4" unique_id=1414073792]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4" unique_id=1263116262]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4/StoreItemBackground" unique_id=1043228643]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/StoreItemBackground" unique_id=1544047575]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -302,7 +389,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4/StoreItemBackground/MarginContainer" unique_id=1865901874]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/StoreItemBackground/MarginContainer" unique_id=452934324]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -311,7 +398,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4/StoreItemBackground" unique_id=1302515583]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/StoreItemBackground" unique_id=741851611]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -325,26 +412,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4/StoreItemBackground/MarginContainer2" unique_id=1019809010]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/StoreItemBackground/MarginContainer2" unique_id=1895701006]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem4" unique_id=1659784643]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4" unique_id=1253395778]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/HBoxContainer" unique_id=377142637]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem5" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=873407825]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/HBoxContainer" unique_id=330687994]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4" unique_id=718421045]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem5" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=1217494573]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5" unique_id=534412720]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5" unique_id=902852325]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5/StoreItemBackground" unique_id=157234119]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/StoreItemBackground" unique_id=1856149133]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -358,7 +462,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5/StoreItemBackground/MarginContainer" unique_id=2043438265]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/StoreItemBackground/MarginContainer" unique_id=335151505]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -367,7 +471,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5/StoreItemBackground" unique_id=1801402879]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/StoreItemBackground" unique_id=1020144382]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -381,26 +485,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5/StoreItemBackground/MarginContainer2" unique_id=1466988976]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/StoreItemBackground/MarginContainer2" unique_id=1294731313]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem5" unique_id=422427570]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5" unique_id=255966433]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/HBoxContainer" unique_id=764646736]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem6" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=945151956]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/HBoxContainer" unique_id=1757565290]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5" unique_id=2002506078]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem6" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=334810716]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6" unique_id=1201500176]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6" unique_id=2097554603]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6/StoreItemBackground" unique_id=1585943191]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/StoreItemBackground" unique_id=1957251721]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -414,7 +535,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6/StoreItemBackground/MarginContainer" unique_id=207959328]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/StoreItemBackground/MarginContainer" unique_id=353642210]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -423,7 +544,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6/StoreItemBackground" unique_id=740191380]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/StoreItemBackground" unique_id=1070024404]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -437,26 +558,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6/StoreItemBackground/MarginContainer2" unique_id=267061445]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/StoreItemBackground/MarginContainer2" unique_id=2144221634]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem6" unique_id=66003343]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6" unique_id=1862635550]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/HBoxContainer" unique_id=324841595]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem7" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=1053084740]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/HBoxContainer" unique_id=1360356175]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6" unique_id=1788414605]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem7" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=32034325]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7" unique_id=288109042]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7" unique_id=1920730282]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7/StoreItemBackground" unique_id=1424289766]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/StoreItemBackground" unique_id=1790927137]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -470,7 +608,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7/StoreItemBackground/MarginContainer" unique_id=816536874]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/StoreItemBackground/MarginContainer" unique_id=229345452]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -479,7 +617,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7/StoreItemBackground" unique_id=762861325]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/StoreItemBackground" unique_id=876141151]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -493,26 +631,43 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7/StoreItemBackground/MarginContainer2" unique_id=1541177901]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/StoreItemBackground/MarginContainer2" unique_id=284592396]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem7" unique_id=1984983016]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7" unique_id=1369786036]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/HBoxContainer" unique_id=1441685540]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
 
-[node name="StoreItem8" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList" unique_id=189479156]
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/HBoxContainer" unique_id=711073468]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7" unique_id=1259116867]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
+
+[node name="StoreItem8" type="VBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList" unique_id=26640627]
 layout_mode = 2
 theme_override_constants/separation = 0
+script = ExtResource("5_5xp22")
 
-[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8" unique_id=1539870080]
+[node name="StoreItemBackground" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8" unique_id=1532346200]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 
-[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8/StoreItemBackground" unique_id=483285191]
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/StoreItemBackground" unique_id=1986796055]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -526,7 +681,7 @@ grow_vertical = 0
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 5
 
-[node name="StockItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8/StoreItemBackground/MarginContainer" unique_id=1849629528]
+[node name="StoreItemStock" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/StoreItemBackground/MarginContainer" unique_id=2063310812]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -535,7 +690,7 @@ text = "99"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8/StoreItemBackground" unique_id=314734161]
+[node name="MarginContainer2" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/StoreItemBackground" unique_id=1888547384]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -549,15 +704,31 @@ offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8/StoreItemBackground/MarginContainer2" unique_id=1853031797]
+[node name="StoreItemImage" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/StoreItemBackground/MarginContainer2" unique_id=152962440]
 layout_mode = 2
 texture = ExtResource("5_3ps1r")
 
-[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/StoreItemsList/StoreItem8" unique_id=2138129634]
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8" unique_id=1496393285]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StoreItemLabel" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/HBoxContainer" unique_id=166745006]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 8
-text = "20G"
+theme_override_font_sizes/font_size = 4
+text = "Sunflower Seeds"
+
+[node name="StoreItemPrice" type="Label" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/HBoxContainer" unique_id=462012521]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_font_sizes/font_size = 4
+text = "20g"
+
+[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8" unique_id=163337337]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_s8dlv")
 
 [node name="ItemDescriptionPanel" type="PanelContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer" unique_id=642324900]
 layout_mode = 2
@@ -566,7 +737,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_s8dlv")
 
 [node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/ItemDescriptionPanel" unique_id=1659986556]
 layout_mode = 2
-theme_override_constants/margin_left = 5
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_bottom = 2
 
@@ -606,13 +777,6 @@ produce a large sunflower."
 fit_content = true
 scroll_active = false
 
-[node name="BuyButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/ItemDescriptionPanel/MarginContainer/HBoxContainer/VBoxContainer/PanelContainer" unique_id=1419219846]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-texture_normal = ExtResource("6_s8dlv")
-
 [node name="PanelContainer" type="PanelContainer" parent="ShopUI/Shop/HBoxContainer" unique_id=1811021086]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -623,11 +787,41 @@ layout_mode = 2
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="TextureButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer" unique_id=1777214524]
+[node name="PlayerMoneyPanel" type="TextureRect" parent="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer" unique_id=1569320768]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_ow1eo")
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer/PlayerMoneyPanel" unique_id=631136920]
+layout_mode = 0
+offset_right = 35.0
+offset_bottom = 17.5
+theme_override_constants/margin_right = 3
+
+[node name="PlayerMoney" type="Label" parent="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer/PlayerMoneyPanel/MarginContainer" unique_id=1942126511]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.93333334, 0.93333334, 0.60784316, 1)
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[node name="ExitButton" type="TextureButton" parent="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer" unique_id=1777214524]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture_normal = ExtResource("5_ymrm4")
 
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem4" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem5" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8" method="_on_buy_button_pressed"]
+
 [editable path="Terrain"]
+[editable path="GuchiNPC"]

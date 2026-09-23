@@ -1,3 +1,6 @@
 res://Scenes/shop.tscn
 res://inventory/player_inventory.tres
 res://Inventory/player_inventory.tres
+res://Scripts/shop/store_item.gd
+res://Scripts/shop/shop.gd
+res://Scripts/interaction/door.gd

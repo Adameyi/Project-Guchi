@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://8q8ovqelp60m" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://c5qu3yocgtyx3" path="res://Scenes/trees.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dqwh6j76folhu" path="res://Scenes/terrain.tscn" id="2_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bkutpi2c12djh" path="res://Scenes/day_night_cycle.tscn" id="6_21xkr"]
+[ext_resource type="Script" uid="uid://dy6ayg677fq0w" path="res://Scripts/autoloads/economy.gd" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://71120miaepmp" path="res://Scenes/interaction/treasure_chest.tscn" id="12_6iyac"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21xkr"]
@@ -30,3 +32,11 @@ sprite_frames = SubResource("SpriteFrames_21xkr")
 [node name="TreasureChest" parent="." unique_id=725694195 instance=ExtResource("12_6iyac")]
 position = Vector2(201, -9)
 scale = Vector2(0.5, 0.5)
+
+[node name="DayNightCycle" parent="." unique_id=441396577 instance=ExtResource("6_21xkr")]
+
+[node name="Economy" type="Node" parent="." unique_id=777717671]
+script = ExtResource("7_6bp64")
+
+[editable path="DayNightCycle"]
+[editable path="DayNightCycle/GameScreen/DayNightPanel"]

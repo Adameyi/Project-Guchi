@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://ydcdt8spqdnd"]
+
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_0sl0m"]
+[ext_resource type="Texture2D" uid="uid://wooc5ng8xm0o" path="res://Assets/Items/pumpkin_seeds.png" id="1_yk2r6"]
+
+[resource]
+script = ExtResource("1_0sl0m")
+id = &"ydcdt8spqdnd"
+display_name = "Pumpkin Seeds"
+icon = ExtResource("1_yk2r6")
+price = 25.0
+stock = 20

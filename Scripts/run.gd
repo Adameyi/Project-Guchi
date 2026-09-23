@@ -9,7 +9,7 @@ func _ready() -> void:
 	for i in range(5):
 		inventory.insert(preload("res://inventory/items/sunflower_seed.tres"))
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector('run_left', 'run_right', 'run_up', 'run_down')
 	velocity = direction * speed
 	
