@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://71120miaepmp"]
 
-[ext_resource type="Script" uid="uid://d3iekudq0q25c" path="res://Scripts/interaction/door.gd" id="1_77sd8"]
+[ext_resource type="Script" uid="uid://d3iekudq0q25c" path="res://Scripts/interaction/entity_interact.gd" id="1_77sd8"]
 [ext_resource type="Texture2D" uid="uid://dghmhhpncvmye" path="res://Assets/Interactables/treasure.png" id="1_bsmnj"]
 [ext_resource type="Texture2D" uid="uid://dqrn2udunkik8" path="res://Assets/Interactables/treasure2.png" id="2_77sd8"]
 [ext_resource type="PackedScene" uid="uid://c5r8s81ya3qw0" path="res://Scenes/interaction/interactable.tscn" id="2_yx78l"]

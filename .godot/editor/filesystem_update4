@@ -1,6 +1,6 @@
-res://Scenes/shop.tscn
+res://Scenes/day_night_cycle.tscn
 res://inventory/player_inventory.tres
 res://Inventory/player_inventory.tres
-res://Scripts/shop/store_item.gd
-res://Scripts/shop/shop.gd
-res://Scripts/interaction/door.gd
+res://Scenes/components/day_night_cycle_component.gd
+res://Scenes/ui/escape_menu_ui.tscn
+res://Scripts/ui/escape_menu_ui.gd

@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://b5qkci66v55rn"]
+
+[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/Spritesheets/Sprite sheet for Basic Pack.png" id="1_dgfud"]
+[ext_resource type="Script" uid="uid://bx88wkd712jj4" path="res://Scripts/autoloads/dialogue.gd" id="1_pjl42"]
+[ext_resource type="FontFile" uid="uid://c8rna1hw7unk" path="res://Fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_p21q5"]
+[ext_resource type="Texture2D" uid="uid://bjdjrsjmcix7e" path="res://Assets/NPCs/guchi_profile.png" id="2_pjl42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgfud"]
+atlas = ExtResource("1_dgfud")
+region = Rect2(162.20074, 176.80977, 92.0105, 29.282822)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p21q5"]
+atlas = ExtResource("1_dgfud")
+region = Rect2(258.65985, 179.14471, 90.91043, 26.488281)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shd1d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1ns2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjl42"]
+atlas = ExtResource("1_dgfud")
+region = Rect2(153.20853, 8.655553, 29.81807, 30.488148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mcti"]
+atlas = ExtResource("1_dgfud")
+region = Rect2(259.23535, 179.611, 89.784, 25.238297)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hwkt"]
+atlas = ExtResource("1_dgfud")
+region = Rect2(292.9978, 2.1505432, 7.2158813, 12.166293)
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=1889093952]
+script = ExtResource("1_pjl42")
+
+[node name="DialogueBackdrop" type="ColorRect" parent="." unique_id=1753523207]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(0, 0, 0, 0.24705882)
+
+[node name="DialogueOptions" type="VBoxContainer" parent="DialogueBackdrop" unique_id=1405028788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -30.0
+offset_right = 66.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="DialogueOption1" type="TextureButton" parent="DialogueBackdrop/DialogueOptions" unique_id=766194521]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.05
+texture_normal = SubResource("AtlasTexture_dgfud")
+texture_pressed = SubResource("AtlasTexture_p21q5")
+texture_hover = SubResource("AtlasTexture_shd1d")
+texture_disabled = SubResource("AtlasTexture_j1ns2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBackdrop/DialogueOptions/DialogueOption1" unique_id=1604560320]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 0
+
+[node name="ChoiceText" type="RichTextLabel" parent="DialogueBackdrop/DialogueOptions/DialogueOption1/MarginContainer" unique_id=1292530803]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.50980395, 0.35686275, 0.2509804, 1)
+theme_override_font_sizes/normal_font_size = 6
+text = "1. View Shop"
+
+[node name="DialogueOption2" type="TextureButton" parent="DialogueBackdrop/DialogueOptions" unique_id=950728922]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.05
+texture_normal = SubResource("AtlasTexture_dgfud")
+texture_pressed = SubResource("AtlasTexture_p21q5")
+texture_hover = SubResource("AtlasTexture_shd1d")
+texture_disabled = SubResource("AtlasTexture_j1ns2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBackdrop/DialogueOptions/DialogueOption2" unique_id=1175023033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 0
+
+[node name="ChoiceText" type="RichTextLabel" parent="DialogueBackdrop/DialogueOptions/DialogueOption2/MarginContainer" unique_id=690043865]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.50980395, 0.35686275, 0.2509804, 1)
+theme_override_font_sizes/normal_font_size = 6
+text = "1. View Shop"
+
+[node name="DialogueOption3" type="TextureButton" parent="DialogueBackdrop/DialogueOptions" unique_id=1972509157]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.05
+texture_normal = SubResource("AtlasTexture_dgfud")
+texture_pressed = SubResource("AtlasTexture_p21q5")
+texture_hover = SubResource("AtlasTexture_shd1d")
+texture_disabled = SubResource("AtlasTexture_j1ns2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBackdrop/DialogueOptions/DialogueOption3" unique_id=1037713675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 0
+
+[node name="ChoiceText" type="RichTextLabel" parent="DialogueBackdrop/DialogueOptions/DialogueOption3/MarginContainer" unique_id=183009213]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.50980395, 0.35686275, 0.2509804, 1)
+theme_override_font_sizes/normal_font_size = 6
+text = "1. View Shop"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1691440322]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2139405634]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="SpeakerBox" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1635192367]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.16
+texture = SubResource("AtlasTexture_pjl42")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/SpeakerBox" unique_id=430341157]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 8
+
+[node name="SpeakerProfile" type="TextureRect" parent="MarginContainer/HBoxContainer/SpeakerBox/MarginContainer" unique_id=85806264]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_pjl42")
+expand_mode = 3
+
+[node name="DialogueBox" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1971554766]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.72
+texture = SubResource("AtlasTexture_5mcti")
+
+[node name="NextIndicator" type="TextureButton" parent="MarginContainer/HBoxContainer/DialogueBox" unique_id=1317963917]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 16.0
+offset_right = 168.0
+offset_bottom = 28.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = SubResource("AtlasTexture_4hwkt")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/DialogueBox" unique_id=1730783328]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 36.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="DialogueText" type="RichTextLabel" parent="MarginContainer/HBoxContainer/DialogueBox/MarginContainer" unique_id=388001425]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.48535866, 0.3325305, 0.23053312, 1)
+theme_override_fonts/normal_font = ExtResource("2_p21q5")
+theme_override_font_sizes/normal_font_size = 6
+text = "Hello nice to meet you!"

@@ -1,5 +1,8 @@
-res://Scripts/shop/
 res://Scripts/autoloads/
+res://Scenes/ui/
+res://Scenes/
+res://Dialogue/
+res://Scripts/shop/
 res://Fonts/
 res://Inventory/items/
 res://Assets/Interactables/
@@ -8,7 +11,6 @@ res://
 res://inventory/
 res://inventory/items/
 res://Scripts/
-res://Scenes/
 res://Assets/Crops/
 res://Assets/SelectionUI/
 res://Assets/

@@ -61,6 +61,10 @@ position = Vector2(-21, 35)
 [node name="GuchiNPC" parent="." unique_id=725694195 instance=ExtResource("3_3mbjb")]
 position = Vector2(-143, 79)
 scale = Vector2(0.5, 0.5)
+interact_type = 1
+
+[node name="Interactable" parent="GuchiNPC" index="2" unique_id=528876910]
+interact_name = "Interact"
 
 [node name="ShopUI" type="CanvasLayer" parent="." unique_id=2125886908]
 

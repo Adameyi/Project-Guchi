@@ -5,8 +5,8 @@ extends Control
 @onready var player_money: Label = $VBoxContainer/MoneyPanel/MarginContainer/PlayerMoney
 
 @export var normal_speed:int = 5
-@export var fast_speed:int = 100
-@export var double_speed:int = 200
+@export var fast_speed:int = 50
+@export var double_speed:int = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

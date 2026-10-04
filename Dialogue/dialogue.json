@@ -1,0 +1,11 @@
+{
+	"id" : "guchi_greet",
+	"lines" : [
+		{"name" : "Guchi", "text" : "*Maw*"},
+		{"name" : "Guchi", "text" : "(Guchi looks at you to make a decision)."}
+	],
+	"choices" : [
+		{"text" : "View Shop", "action" : "open_shop"},
+		{"text" : "Leave",  "action" : "exit_dialogue"}
+	]
+}

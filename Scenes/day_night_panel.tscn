@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0420ixddrwcc"]
 
-[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/TimeUI/Sprite sheet for Basic Pack.png" id="1_a0lns"]
+[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/Spritesheets/Sprite sheet for Basic Pack.png" id="1_a0lns"]
 [ext_resource type="FontFile" uid="uid://c8rna1hw7unk" path="res://Fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_17k6u"]
 [ext_resource type="Script" uid="uid://mjyno2obelk7" path="res://Scripts/ui/day_night_panel.gd" id="3_17k6u"]
 

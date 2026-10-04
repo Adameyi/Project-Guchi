@@ -34,6 +34,12 @@ func _ready() -> void:
 		else:
 			_item_nodes[i].hide() #Fewer data entries than slots.
 
+func _open_shop() -> void:
+	shop.show()
+
+func _exit_shop() -> void:
+	shop.hide()
+
 #Check money before purchase
 func _on_buy_button_pressed(item_id: StringName) -> void:
 	print('Buying item: ', item_id)

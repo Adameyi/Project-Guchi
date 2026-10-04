@@ -1,0 +1,708 @@
+[gd_scene format=3 uid="uid://ci4ns7gqkuw4h"]
+
+[ext_resource type="Script" uid="uid://ps0rcr2svgqs" path="res://Scripts/ui/escape_menu_ui.gd" id="1_r1dcy"]
+[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/Spritesheets/Sprite sheet for Basic Pack.png" id="2_u4u4q"]
+[ext_resource type="Texture2D" uid="uid://bjdjrsjmcix7e" path="res://Assets/NPCs/guchi_profile.png" id="3_ex5tv"]
+[ext_resource type="Texture2D" uid="uid://df7n2wcky0ydi" path="res://Assets/MenuUI/save_icon.png" id="4_jdxb7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex5tv"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(258.74594, 179.52847, 90.58597, 26.169006)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v67jm"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(106.08818, 57.99963, 27.74681, 28.143185)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpl1h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83vxw"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(291.44876, 17.773933, 8.378082, 12.612186)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdxb7"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(354.2085, 177.0834, 171.67456, 62.0811)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40ou8"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(609.6232, 195.92104, 13.446228, 9.306503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk7v2"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(258.93866, 83.886406, 10.35553, 10.573509)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfs0l"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(627.5513, 114.193634, 7.9866943, 11.167824)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag77f"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(258.43674, 179.13864, 91.81479, 27.03534)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jdxb7"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-c40ccd4e170a78edfa7055504af78145.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4ua8"]
+atlas = SubResource("CompressedTexture2D_jdxb7")
+region = Rect2(258.37927, 179.32242, 91.01944, 26.488297)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cultt"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(465.35318, 104.50242, 29.310944, 15.558922)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3gsq"]
+atlas = ExtResource("2_u4u4q")
+region = Rect2(401.25757, 104.38266, 29.596252, 15.075012)
+
+[node name="EscapeMenuUI" type="CanvasLayer" unique_id=456138213]
+script = ExtResource("1_r1dcy")
+
+[node name="EscapeMenu" type="Control" parent="." unique_id=1865635205]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBackdrop" type="PanelContainer" parent="EscapeMenu" unique_id=1651292367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EscapeVBox" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop" unique_id=740979635]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="OptionsButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=1223001827]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ex5tv")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/EscapeVBox/OptionsButton" unique_id=191480927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/OptionsButton/MarginContainer" unique_id=325031842]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="SavesButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=748319819]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ex5tv")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/EscapeVBox/SavesButton" unique_id=545264335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/SavesButton/MarginContainer" unique_id=2107396567]
+layout_mode = 2
+text = "Saves"
+horizontal_alignment = 1
+
+[node name="AwardsButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=975114138]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ex5tv")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/EscapeVBox/AwardsButton" unique_id=772697565]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/AwardsButton/MarginContainer" unique_id=1488983020]
+layout_mode = 2
+text = "Awards"
+horizontal_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=584833409]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ex5tv")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton" unique_id=950879077]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton/MarginContainer" unique_id=2088170335]
+layout_mode = 2
+text = "Exits"
+horizontal_alignment = 1
+
+[node name="SaveSlotsHBox" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop" unique_id=1154835230]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ReturnButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox" unique_id=597669097]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_v67jm")
+texture_pressed = SubResource("AtlasTexture_mpl1h")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ReturnButton" unique_id=2011979045]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ReturnButton/MarginContainer" unique_id=1554771745]
+layout_mode = 2
+texture = SubResource("AtlasTexture_83vxw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox" unique_id=1381569780]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+
+[node name="SaveSlotsVBox" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer" unique_id=645814177]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="SaveSlotPanel1" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=476616757]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_jdxb7")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1" unique_id=366437501]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer" unique_id=550355567]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer" unique_id=1112321050]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="AvatarProfile" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer" unique_id=1432586485]
+layout_mode = 2
+texture = ExtResource("3_ex5tv")
+expand_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer" unique_id=875194170]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2" unique_id=2001040691]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=650577056]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SaveSlotHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1239427828]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 10
+text = "Save Slot 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1529503597]
+layout_mode = 2
+
+[node name="LoadSaveButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1913582785]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="DeleteSaveButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1309309492]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_mk7v2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=543771405]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NameHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1509697721]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.13725491, 0.13725491, 1)
+theme_override_font_sizes/font_size = 8
+text = "Guchi"
+
+[node name="Date" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=16180605]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 5
+text = "Day 3, 10:30pm"
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1013938018]
+layout_mode = 2
+theme_override_constants/margin_top = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=1578800014]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1952258926]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7137255, 0.5372549, 0.38431373, 1)
+theme_override_font_sizes/font_size = 6
+text = "Year 1 - Summer Farm"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=2136162716]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=1660020922]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="TextureRect" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=2106785266]
+layout_mode = 2
+texture = SubResource("AtlasTexture_pfs0l")
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=972364735]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "500g"
+
+[node name="EmptySaveSlot1" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=1403725096]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_ag77f")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1" unique_id=1651809912]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1/MarginContainer" unique_id=457107287]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1/MarginContainer/HBoxContainer" unique_id=1395371058]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 9
+text = "Empty Save Slot"
+
+[node name="EmptySaveSlotButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1/MarginContainer/HBoxContainer" unique_id=743130753]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("4_jdxb7")
+
+[node name="SaveSlotPanel2" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=1289571132]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_jdxb7")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2" unique_id=598826435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer" unique_id=2021212761]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer" unique_id=114185280]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="AvatarProfile" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer" unique_id=1117278771]
+layout_mode = 2
+texture = ExtResource("3_ex5tv")
+expand_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer" unique_id=2127530331]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1220592697]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=2077501079]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SaveSlotHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1377902918]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 10
+text = "Save Slot 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1264050862]
+layout_mode = 2
+
+[node name="LoadSaveButton2" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=628404087]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="DeleteSaveButton2" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=645150636]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_mk7v2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1175635604]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NameHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=266243167]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.13725491, 0.13725491, 1)
+theme_override_font_sizes/font_size = 8
+text = "Guchi"
+
+[node name="Date" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1344214145]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 5
+text = "Day 3, 10:30pm"
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1251978574]
+layout_mode = 2
+theme_override_constants/margin_top = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=170030816]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1241605445]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7137255, 0.5372549, 0.38431373, 1)
+theme_override_font_sizes/font_size = 6
+text = "Year 1 - Summer Farm"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=947740367]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=38858305]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="TextureRect" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=1780604261]
+layout_mode = 2
+texture = SubResource("AtlasTexture_pfs0l")
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=396459181]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "500g"
+
+[node name="EmptySaveSlot2" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=1990142576]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_ag77f")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2" unique_id=928739846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2/MarginContainer" unique_id=1251012911]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2/MarginContainer/HBoxContainer" unique_id=251655378]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 9
+text = "Empty Save Slot"
+
+[node name="EmptySaveSlotButton2" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2/MarginContainer/HBoxContainer" unique_id=191010535]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("4_jdxb7")
+
+[node name="SaveSlotPanel3" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=51783986]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_jdxb7")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3" unique_id=2123300332]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer" unique_id=1771282683]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer" unique_id=1424446873]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="AvatarProfile" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer" unique_id=54438954]
+layout_mode = 2
+texture = ExtResource("3_ex5tv")
+expand_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer" unique_id=1648943229]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1150128611]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1906667558]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SaveSlotHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=493640698]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 10
+text = "Save Slot 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1595280764]
+layout_mode = 2
+
+[node name="LoadSaveButton3" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=667241551]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="DeleteSaveButton3" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1218246443]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_mk7v2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1585168066]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NameHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=2076538171]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.13725491, 0.13725491, 1)
+theme_override_font_sizes/font_size = 8
+text = "Guchi"
+
+[node name="Date" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1228918236]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6666667, 0.4745098, 0.34901962, 1)
+theme_override_font_sizes/font_size = 5
+text = "Day 3, 10:30pm"
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=336534531]
+layout_mode = 2
+theme_override_constants/margin_top = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=35195453]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=232154484]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7137255, 0.5372549, 0.38431373, 1)
+theme_override_font_sizes/font_size = 6
+text = "Year 1 - Summer Farm"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1720536802]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=1668235776]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="TextureRect" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=2029424195]
+layout_mode = 2
+texture = SubResource("AtlasTexture_pfs0l")
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer" unique_id=1179727641]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "500g"
+
+[node name="EmptySaveSlot3" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=303129016]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_ag77f")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3" unique_id=1241319545]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3/MarginContainer" unique_id=1811297195]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3/MarginContainer/HBoxContainer" unique_id=1575003656]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 9
+text = "Empty Save Slot"
+
+[node name="EmptySaveSlotButton3" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3/MarginContainer/HBoxContainer" unique_id=845100165]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("4_jdxb7")
+
+[node name="WarningPanelBackdrop" type="PanelContainer" parent="EscapeMenu" unique_id=346743380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/WarningPanelBackdrop" unique_id=1778338185]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="WarningPanel" type="TextureRect" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer" unique_id=1785365852]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_s4ua8")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel" unique_id=506425006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0006209415
+theme_override_constants/margin_top = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer" unique_id=1076343508]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="WarningMessage" type="Label" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer" unique_id=431139186]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 5
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer" unique_id=568433587]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="DeleteButton" type="TextureButton" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1961138227]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_cultt")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" unique_id=1874823773]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0041214307
+theme_override_constants/margin_top = 2
+
+[node name="DeleteButtonText" type="Label" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton/MarginContainer" unique_id=699846859]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.52156866, 0.16078432, 0.23921569, 1)
+theme_override_font_sizes/font_size = 7
+text = "Delete"
+horizontal_alignment = 1
+
+[node name="CancelButton" type="TextureButton" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2136264500]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_f3gsq")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" unique_id=927987581]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0041214307
+theme_override_constants/margin_top = 2
+
+[node name="DeleteButtonText" type="Label" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton/MarginContainer" unique_id=1651990632]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2784314, 0.16078432, 0.050980393, 1)
+theme_override_font_sizes/font_size = 7
+text = "Cancel"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/SavesButton" to="." method="_on_saves_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

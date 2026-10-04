@@ -6,6 +6,9 @@
 [node name="DayNightCycle" type="Node2D" unique_id=441396577]
 
 [node name="DayNightCycleComponent" parent="." unique_id=1812259908 instance=ExtResource("1_jjvhh")]
+initial_day = null
+initial_hour = null
+initial_minute = null
 
 [node name="GameScreen" type="CanvasLayer" parent="." unique_id=1359676384]
 
