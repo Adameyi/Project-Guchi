@@ -47,7 +47,13 @@ func save_game(slot: int) -> void:
 	#Bundle player and time into dict:
 	var data = {
 		'player': _save_player(player), #pos + inv from _save_player func
-		'saved_at': Time.get_datetime_string_from_system()
+		'time': {
+			'day' : DayNightCycle.day,
+			'hour' : DayNightCycle.hour,
+			'minute' : DayNightCycle.minute,
+		},
+		'money': Economy.get_bal(),
+		'saved_at': Time.get_datetime_string_from_system(),
 	}
 	
 	# Open/Create file for  slot (e.g., user://saves/slot1.save.

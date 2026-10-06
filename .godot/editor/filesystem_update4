@@ -1,6 +1,7 @@
-res://Scenes/day_night_cycle.tscn
+res://Scenes/ui/escape_menu_ui.tscn
 res://inventory/player_inventory.tres
 res://Inventory/player_inventory.tres
-res://Scenes/components/day_night_cycle_component.gd
-res://Scenes/ui/escape_menu_ui.tscn
 res://Scripts/ui/escape_menu_ui.gd
+res://Scenes/main.tscn
+res://Scripts/autoloads/save_manager.gd
+res://Scripts/globals/day_night_cycle_manager.gd

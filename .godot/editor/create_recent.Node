@@ -1,8 +1,9 @@
+TextureButton
+LineEdit
 ScrollContainer
 MarginContainer
 PanelContainer
 Label
-TextureButton
 HBoxContainer
 VBoxContainer
 TextureRect
@@ -11,5 +12,3 @@ Panel
 Control
 CanvasLayer
 Node
-RichTextLabel
-ColorRect

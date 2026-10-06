@@ -41,6 +41,10 @@ scale = Vector2(0.5, 0.5)
 [node name="DayNightCycleComponent" parent="DayNightCycle" index="0" unique_id=1812259908]
 visible = false
 
+[node name="DayNightPanel" parent="DayNightCycle/GameScreen" parent_id_path=PackedInt32Array(441396577, 1359676384) index="0" unique_id=927985485]
+offset_left = -48.0
+offset_bottom = 75.0
+
 [node name="Economy" type="Node" parent="." unique_id=777717671]
 script = ExtResource("7_6bp64")
 
@@ -50,6 +54,7 @@ script = ExtResource("8_344ge")
 [node name="SaveManager" parent="." unique_id=1144303031 instance=ExtResource("9_ynf5e")]
 
 [node name="EscapeMenuUI" parent="." unique_id=456138213 instance=ExtResource("11_d1ilt")]
+visible = false
 
 [editable path="DayNightCycle"]
 [editable path="DayNightCycle/GameScreen/DayNightPanel"]

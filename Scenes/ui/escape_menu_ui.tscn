@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/Spritesheets/Sprite sheet for Basic Pack.png" id="2_u4u4q"]
 [ext_resource type="Texture2D" uid="uid://bjdjrsjmcix7e" path="res://Assets/NPCs/guchi_profile.png" id="3_ex5tv"]
 [ext_resource type="Texture2D" uid="uid://df7n2wcky0ydi" path="res://Assets/MenuUI/save_icon.png" id="4_jdxb7"]
+[ext_resource type="Texture2D" uid="uid://1j36kmpn50j2" path="res://Assets/MenuUI/edit_icon.png" id="4_pfs0l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ex5tv"]
 atlas = ExtResource("2_u4u4q")
@@ -26,6 +27,9 @@ region = Rect2(354.2085, 177.0834, 171.67456, 62.0811)
 [sub_resource type="AtlasTexture" id="AtlasTexture_40ou8"]
 atlas = ExtResource("2_u4u4q")
 region = Rect2(609.6232, 195.92104, 13.446228, 9.306503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdqa7"]
+atlas = ExtResource("4_pfs0l")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mk7v2"]
 atlas = ExtResource("2_u4u4q")
@@ -198,12 +202,18 @@ texture = SubResource("AtlasTexture_83vxw")
 [node name="ScrollContainer" type="ScrollContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox" unique_id=1381569780]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="SaveSlotsVBox" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer" unique_id=645814177]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=1960165274]
+layout_mode = 2
+placeholder_text = "Search Save.."
 
 [node name="SaveSlotPanel1" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=476616757]
 texture_filter = 1
@@ -244,7 +254,7 @@ theme_override_constants/separation = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=650577056]
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 6
 
 [node name="SaveSlotHeader" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1239427828]
 layout_mode = 2
@@ -254,12 +264,18 @@ text = "Save Slot 1"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1529503597]
 layout_mode = 2
+alignment = 1
 
 [node name="LoadSaveButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1913582785]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="OverwriteButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1697434884]
+layout_mode = 2
+size_flags_stretch_ratio = 0.56
+texture_normal = SubResource("AtlasTexture_mdqa7")
 
 [node name="DeleteSaveButton1" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1309309492]
 layout_mode = 2
@@ -289,7 +305,8 @@ theme_override_constants/margin_top = 6
 [node name="HBoxContainer2" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=1578800014]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1952258926]
+[node name="GameTime" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel1/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1952258926]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7137255, 0.5372549, 0.38431373, 1)
 theme_override_font_sizes/font_size = 6
@@ -323,13 +340,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1/MarginContainer" unique_id=457107287]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot1/MarginContainer/HBoxContainer" unique_id=1395371058]
 layout_mode = 2
@@ -343,6 +362,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("4_jdxb7")
 
 [node name="SaveSlotPanel2" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=1289571132]
+visible = false
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -397,6 +417,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="OverwriteButton2" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=360505965]
+layout_mode = 2
+size_flags_stretch_ratio = 0.56
+texture_normal = SubResource("AtlasTexture_mdqa7")
 
 [node name="DeleteSaveButton2" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel2/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=645150636]
 layout_mode = 2
@@ -460,13 +485,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2/MarginContainer" unique_id=1251012911]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot2/MarginContainer/HBoxContainer" unique_id=251655378]
 layout_mode = 2
@@ -480,6 +506,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("4_jdxb7")
 
 [node name="SaveSlotPanel3" type="TextureRect" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox" unique_id=51783986]
+visible = false
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -534,6 +561,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_40ou8")
+
+[node name="OverwriteButton3" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=230476159]
+layout_mode = 2
+size_flags_stretch_ratio = 0.56
+texture_normal = SubResource("AtlasTexture_mdqa7")
 
 [node name="DeleteSaveButton3" type="TextureButton" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/SaveSlotPanel3/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1218246443]
 layout_mode = 2
@@ -597,13 +629,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3/MarginContainer" unique_id=1811297195]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/EmptySaveSlot3/MarginContainer/HBoxContainer" unique_id=1575003656]
 layout_mode = 2
@@ -617,6 +650,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("4_jdxb7")
 
 [node name="WarningPanelBackdrop" type="PanelContainer" parent="EscapeMenu" unique_id=346743380]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -680,6 +714,35 @@ theme_override_font_sizes/font_size = 7
 text = "Delete"
 horizontal_alignment = 1
 
+[node name="OverwriteButton" type="TextureButton" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1296722242]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_cultt")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/OverwriteButton" unique_id=368944329]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -5.0
+offset_right = 15.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0041214307
+theme_override_constants/margin_top = 2
+
+[node name="OverwriteButtonText" type="Label" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/OverwriteButton/MarginContainer" unique_id=516361019]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.52156866, 0.16078432, 0.23921569, 1)
+theme_override_font_sizes/font_size = 5
+text = " Overwrite"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="CancelButton" type="TextureButton" parent="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2136264500]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_f3gsq")
@@ -705,4 +768,5 @@ horizontal_alignment = 1
 [connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ReturnButton" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/OverwriteButton" to="." method="_on_overwrite_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/WarningPanelBackdrop/MarginContainer/WarningPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
