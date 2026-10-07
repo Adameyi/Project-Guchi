@@ -79,10 +79,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="EscapeVBox" type="VBoxContainer" parent="EscapeMenu/MenuBackdrop" unique_id=740979635]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="ContinueButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=705875492]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ex5tv")
+
+[node name="MarginContainer" type="MarginContainer" parent="EscapeMenu/MenuBackdrop/EscapeVBox/ContinueButton" unique_id=301071404]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/ContinueButton/MarginContainer" unique_id=30934143]
+layout_mode = 2
+text = "Continue"
+horizontal_alignment = 1
 
 [node name="OptionsButton" type="TextureButton" parent="EscapeMenu/MenuBackdrop/EscapeVBox" unique_id=1223001827]
 texture_filter = 1
@@ -169,10 +190,11 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Label" type="Label" parent="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton/MarginContainer" unique_id=2088170335]
 layout_mode = 2
-text = "Exits"
+text = "Exit Game"
 horizontal_alignment = 1
 
 [node name="SaveSlotsHBox" type="HBoxContainer" parent="EscapeMenu/MenuBackdrop" unique_id=1154835230]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -764,6 +786,8 @@ theme_override_font_sizes/font_size = 7
 text = "Cancel"
 horizontal_alignment = 1
 
+[connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/SavesButton" to="." method="_on_saves_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="EscapeMenu/MenuBackdrop/SaveSlotsHBox/ReturnButton" to="." method="_on_return_button_pressed"]

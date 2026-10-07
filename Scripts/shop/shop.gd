@@ -12,6 +12,8 @@ var _item_nodes: Array[StoreItem] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	shop.hide()
+	
+	DialogueManager.open_shop.connect(_open_shop)
 	Economy.balance_changed.connect(_on_balance_changed)
 	_on_balance_changed(Economy.get_bal())
 	_item_nodes = []
@@ -35,6 +37,7 @@ func _ready() -> void:
 			_item_nodes[i].hide() #Fewer data entries than slots.
 
 func _open_shop() -> void:
+	print('opening shop')
 	shop.show()
 
 func _exit_shop() -> void:
@@ -47,3 +50,7 @@ func _on_buy_button_pressed(item_id: StringName) -> void:
 
 func _on_balance_changed(new_balance: int):
 	player_money.text = str(new_balance)
+
+
+func _on_exit_button_pressed() -> void:
+	_exit_shop()

@@ -4,6 +4,7 @@ signal dialogue_started()
 signal line_shown(name: String, text: String)
 signal choices_shown(choices: Array)
 signal dialogue_ended()
+signal open_shop
 
 var _lines: Array = []
 var _choices: Array = []
@@ -62,13 +63,17 @@ func select_choice(index: int) -> void:
 	# No Available Choices.
 	if index < 0 || index >= _choices.size():
 		return
-	var action: String = _choices[index].get("open_shop","exit_dialogue")
+	var action: String = _choices[index].get("action","exit_dialogue")
 	_handle_action(action)
 
 func _handle_action(action: String) -> void:
+	print("1. action received: '", action, "'")
 	if action == "open_shop":
+		print("1. emitting open_shop")
+		open_shop.emit()
 		_end_dialogue()
 	elif action == "exit_dialogue":
+		print("2. exiting dialogue")
 		_end_dialogue()
 	#Next Line
 	elif action.begins_with("goto:"):

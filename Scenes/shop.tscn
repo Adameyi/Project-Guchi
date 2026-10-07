@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://djnm14pgwbgnu" path="res://Inventory/items/potato_seed.tres" id="12_1shhe"]
 [ext_resource type="Resource" uid="uid://ydcdt8spqdnd" path="res://Inventory/items/pumpkin_seed.tres" id="13_n1qjt"]
 [ext_resource type="Resource" uid="uid://dcgfbp0lcc4vg" path="res://Inventory/items/turnip_seed.tres" id="14_ik0jt"]
+[ext_resource type="PackedScene" uid="uid://0420ixddrwcc" path="res://Scenes/day_night_panel.tscn" id="22_jhx1v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymrm4"]
 
@@ -818,6 +819,8 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 texture_normal = ExtResource("5_ymrm4")
 
+[node name="DayNightPanel" parent="ShopUI" unique_id=927985485 instance=ExtResource("22_jhx1v")]
+
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem2" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem3" method="_on_buy_button_pressed"]
@@ -826,6 +829,7 @@ texture_normal = ExtResource("5_ymrm4")
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem6" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem7" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8/BuyButton" to="ShopUI/Shop/HBoxContainer/MarginContainer/VBoxContainer/StorePanel/ScrollContainer/StoreItemsList/StoreItem8" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="ShopUI/Shop/HBoxContainer/PanelContainer/MarginContainer/ExitButton" to="ShopUI/Shop" method="_on_exit_button_pressed"]
 
 [editable path="Terrain"]
 [editable path="GuchiNPC"]

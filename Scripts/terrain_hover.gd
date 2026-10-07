@@ -42,9 +42,16 @@ func _process(_delta):
 	
 		if Input.is_action_just_pressed('left_click'):
 			if tool_ui_slot.getCurrentTool() == 'Hoe':
+				if planted_crops.has(tile_coords):
+					var crop = planted_crops[tile_coords]
+					if crop._is_harvestable():
+						harvest_crop(tile_coords)
+						return
 				place_crop(tile_coords)
 			elif tool_ui_slot.getCurrentTool() == 'Watering_Can':
 				water_crop(tile_coords)
+			elif tool_ui_slot.getCurrentTool() == 'Remove':
+				remove_crop(tile_coords)
 		if Input.is_action_just_pressed('right_click'):
 			plant_seed(tile_coords)
 	else:
@@ -53,7 +60,7 @@ func _process(_delta):
 
 func place_crop(tile_coords: Vector2i):
 		if planted_crops.has(tile_coords):
-			return # already indexed/occupied
+			return
 			
 		var crop = crop_scene.instantiate()
 		crop.global_position = grass.map_to_local(tile_coords)
@@ -67,6 +74,7 @@ func water_crop(tile_coords: Vector2i):
 			
 func plant_seed(tile_coords: Vector2i):
 		if planted_crops.has(tile_coords):
+			print('Planting Seed.')
 			var crop = planted_crops[tile_coords]
 			crop.grow()
 			return
@@ -77,3 +85,13 @@ func plant_seed(tile_coords: Vector2i):
 			if slot.amount <= 0:
 				slot.item = null
 			inventory.update.emit()
+
+func harvest_crop(tile_coords: Vector2i) -> void:
+	var crop = planted_crops[tile_coords]
+	for i in crop.crop_data.harvest_amount:
+		inventory.insert(crop.crop_data.harvest_item)
+	crop.reset_to_soil()
+	
+func remove_crop(tile_coords: Vector2i) -> void:
+	var crop = planted_crops[tile_coords]
+	crop.reset_to_soil()

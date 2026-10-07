@@ -58,9 +58,6 @@ script = ExtResource("8_344ge")
 visible = false
 
 [node name="OptionsPanel" parent="." unique_id=1218883137 instance=ExtResource("11_6iyac")]
-unique_name_in_owner = true
-visible = false
 
 [editable path="DayNightCycle"]
 [editable path="DayNightCycle/GameScreen/DayNightPanel"]
-[editable path="OptionsPanel"]

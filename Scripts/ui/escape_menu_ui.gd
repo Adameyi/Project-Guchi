@@ -3,8 +3,12 @@ extends CanvasLayer
 @onready var save_slots_h_box: HBoxContainer = $EscapeMenu/MenuBackdrop/SaveSlotsHBox
 @onready var escape_v_box: VBoxContainer = $EscapeMenu/MenuBackdrop/EscapeVBox
 
-# Escape Menu.
+# Escape Menu and Warning UI
 @onready var options_button: TextureButton = $EscapeMenu/MenuBackdrop/EscapeVBox/OptionsButton
+@onready var options: Control = $"../OptionsPanel/Options"
+@onready var options_panel: CanvasLayer = %OptionsPanel
+
+
 @onready var awards_button: TextureButton = $EscapeMenu/MenuBackdrop/EscapeVBox/AwardsButton
 @onready var saves_button: TextureButton = $EscapeMenu/MenuBackdrop/EscapeVBox/SavesButton
 @onready var exit_button: TextureButton = $EscapeMenu/MenuBackdrop/EscapeVBox/ExitButton
@@ -47,7 +51,10 @@ extends CanvasLayer
 
 @onready var escape_menu: Control = $EscapeMenu
 @onready var game_time: Label = %GameTime
-@onready var line_edit: LineEdit = $EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/LineEdit
+
+#Search Bar
+@onready var search_bar: LineEdit = $EscapeMenu/MenuBackdrop/SaveSlotsHBox/ScrollContainer/SaveSlotsVBox/LineEdit
+var search_text = ""
 
 var pending_slot = 0
 
@@ -56,8 +63,10 @@ func _ready() -> void:
 	hide()
 	warning_panel_backdrop.hide()
 	save_slots_h_box.hide()
+	options.hide()
 	delete_button.pressed.connect(_on_delete_button_pressed)
-
+	search_bar.text_changed.connect(_on_search_changed)
+	
 	# Connect empty save slots
 	empty_save_slot_button_1.pressed.connect(func(): 
 		SaveManager.save_game(1))
@@ -93,6 +102,8 @@ func _ready() -> void:
 	delete_save_button_1.pressed.connect(_on_delete_slots_button_pressed.bind(1))
 	delete_save_button_2.pressed.connect(_on_delete_slots_button_pressed.bind(2))
 	delete_save_button_3.pressed.connect(_on_delete_slots_button_pressed.bind(3))
+	
+	options_panel.OptionsClosed.connect(_on_options_closed)
 
 func refresh_save_slots():
 	for i in range(3):
@@ -124,9 +135,6 @@ func toggle_menu():
 		escape_v_box.show()
 		refresh_save_slots()
 		
-func _on_saves_button_pressed() -> void:
-	save_slots_h_box.show()
-	escape_v_box.hide()
 
 func _on_empty_slots_button_pressed(slot:int) -> void:
 	refresh_save_slots()
@@ -173,3 +181,23 @@ func _close_warning() -> void:
 	pending_slot = 0
 	warning_panel_backdrop.hide()
 	refresh_save_slots()
+
+func _on_search_changed(new_text: String) -> void:
+	search_text = new_text.strip_edges().to_lower()
+	refresh_save_slots()
+
+# Menu Buttons
+func _on_saves_button_pressed() -> void:
+	save_slots_h_box.show()
+	escape_v_box.hide()
+	
+func _on_options_button_pressed() -> void:
+	options.show()
+	escape_v_box.hide()
+	
+func _on_options_closed() -> void:
+	options.hide()
+	escape_v_box.show()
+
+func _on_continue_button_pressed() -> void:
+	toggle_menu()

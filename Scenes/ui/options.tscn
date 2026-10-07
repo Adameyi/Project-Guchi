@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cgc2r55bkj0mo"]
+
+[ext_resource type="Script" uid="uid://cunns2a50ekqc" path="res://Scripts/ui/options.gd" id="1_1a2md"]
+[ext_resource type="Texture2D" uid="uid://dqillv28ds6eg" path="res://Assets/Spritesheets/Sprite sheet for Basic Pack.png" id="1_eyigu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a2md"]
+atlas = ExtResource("1_eyigu")
+region = Rect2(465.3179, 104.81446, 29.70639, 15.039314)
+
+[node name="OptionsPanel" type="CanvasLayer" unique_id=1218883137]
+script = ExtResource("1_1a2md")
+
+[node name="Options" type="Control" parent="." unique_id=1209346912]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=1671476743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="ColorRect" parent="Options/MarginContainer" unique_id=27517970]
+texture_filter = 1
+layout_mode = 2
+color = Color(0.5879296, 0.32426244, 0.13415307, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/MarginContainer/TextureRect" unique_id=1684262579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/MarginContainer/TextureRect/MarginContainer" unique_id=1782362695]
+layout_mode = 2
+
+[node name="AccountHeader" type="Label" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=679878479]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Account:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=735870152]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1557502784]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=494591546]
+layout_mode = 2
+theme_override_font_sizes/font_size = 4
+placeholder_text = "Guchi"
+
+[node name="OptionsReturnButton" type="TextureButton" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=1784212503]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = SubResource("AtlasTexture_1a2md")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer/OptionsReturnButton" unique_id=1171909379]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -5.5
+offset_right = 36.0
+offset_bottom = 5.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 7
+text = "Return to Menu"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Options/MarginContainer/TextureRect/MarginContainer/VBoxContainer/OptionsReturnButton" to="." method="_on_options_return_button_pressed"]

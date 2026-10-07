@@ -5,9 +5,7 @@ extends CharacterBody2D
 @onready var inventory: Inventory = preload('res://inventory/player_inventory.tres')
 
 func _ready() -> void:
-	#Starting Items
-	for i in range(5):
-		inventory.insert(preload("res://inventory/items/sunflower_seed.tres"))
+	pass
 	
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector('run_left', 'run_right', 'run_up', 'run_down')
