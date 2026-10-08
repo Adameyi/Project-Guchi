@@ -6,3 +6,4 @@ extends Resource
 @export var icon: Texture2D
 @export var price: float = 0
 @export var stock: int = -1
+@export var item: Inventory_Item

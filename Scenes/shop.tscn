@@ -6,21 +6,22 @@
 [ext_resource type="Texture2D" uid="uid://bjleym7ylox5t" path="res://Assets/ShopUI/shop_background.png" id="3_k6jq0"]
 [ext_resource type="Script" uid="uid://trad6e0n1pab" path="res://Scripts/shop/shop.gd" id="3_tyrku"]
 [ext_resource type="Texture2D" uid="uid://dlrud7e82kvdu" path="res://Assets/ShopUI/shop_item_panel_normal.png" id="4_3ps1r"]
-[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="4_ow1eo"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Shop/ShopItemData.gd" id="4_ow1eo"]
 [ext_resource type="Texture2D" uid="uid://cypdiim6qwvse" path="res://Assets/Items/sunflower_seeds.png" id="5_3ps1r"]
 [ext_resource type="Script" uid="uid://b81x0lkgsavgk" path="res://Scripts/shop/store_item.gd" id="5_5xp22"]
-[ext_resource type="Resource" uid="uid://dwa02b1rvhvur" path="res://Inventory/items/blueberry_seed.tres" id="5_k6pkm"]
 [ext_resource type="Texture2D" uid="uid://fmntw1p538j0" path="res://Assets/ShopUI/shop_exit_sign.png" id="5_ymrm4"]
-[ext_resource type="Resource" uid="uid://b8efd8llg2dkb" path="res://Inventory/items/carrot_seed.tres" id="6_m13ki"]
+[ext_resource type="Resource" uid="uid://jjgpqw4w4h1a" path="res://Shop/items/blueberry_seed.tres" id="6_3568l"]
 [ext_resource type="Texture2D" uid="uid://dqxva6vgftmpf" path="res://Assets/ShopUI/shop_buy_button_normal.png" id="6_s8dlv"]
-[ext_resource type="Resource" uid="uid://bmcrcqb507u1m" path="res://Inventory/items/cauliflower_seed.tres" id="7_3mbjb"]
-[ext_resource type="Resource" uid="uid://dfct4w25hedio" path="res://Inventory/items/eggplant_speed.tres" id="8_jhx1v"]
-[ext_resource type="Resource" uid="uid://cvd8bhcs1q6b6" path="res://Inventory/items/heartberry_seed.tres" id="9_dvu38"]
-[ext_resource type="Resource" uid="uid://c54d76pv4duhw" path="res://Inventory/items/magicberry_seed.tres" id="10_k7yfq"]
-[ext_resource type="Resource" uid="uid://d7jowdq1c12f" path="res://Inventory/items/onion_seed.tres" id="11_6rctg"]
-[ext_resource type="Resource" uid="uid://djnm14pgwbgnu" path="res://Inventory/items/potato_seed.tres" id="12_1shhe"]
-[ext_resource type="Resource" uid="uid://ydcdt8spqdnd" path="res://Inventory/items/pumpkin_seed.tres" id="13_n1qjt"]
-[ext_resource type="Resource" uid="uid://dcgfbp0lcc4vg" path="res://Inventory/items/turnip_seed.tres" id="14_ik0jt"]
+[ext_resource type="Resource" uid="uid://bid4fba4l807q" path="res://Shop/items/carrot_seed.tres" id="7_mjtuy"]
+[ext_resource type="Resource" uid="uid://bsdre8sirrb7b" path="res://Shop/items/cauliflower_seed.tres" id="8_cuuv1"]
+[ext_resource type="Resource" uid="uid://yfafmitpeefs" path="res://Shop/items/eggplant_speed.tres" id="9_yl1pv"]
+[ext_resource type="Resource" uid="uid://df7hwsj6xe2ff" path="res://Shop/items/heartberry_seed.tres" id="10_dvu38"]
+[ext_resource type="Resource" uid="uid://b232v3e7vv0yc" path="res://Shop/items/magicberry_seed.tres" id="11_k7yfq"]
+[ext_resource type="Resource" uid="uid://dtrdbeaoiv4m6" path="res://Shop/items/onion_seed.tres" id="12_6rctg"]
+[ext_resource type="Resource" uid="uid://c2hjkoi8xvws2" path="res://Shop/items/potato_seed.tres" id="13_1shhe"]
+[ext_resource type="Resource" uid="uid://cujehukymg750" path="res://Shop/items/pumpkin_seed.tres" id="14_n1qjt"]
+[ext_resource type="Resource" uid="uid://bxeaeun7vugpg" path="res://Shop/items/sunflower_seed.tres" id="15_ik0jt"]
+[ext_resource type="Resource" uid="uid://36xnhht7dop1" path="res://Shop/items/turnip_seed.tres" id="16_lkkvn"]
 [ext_resource type="PackedScene" uid="uid://0420ixddrwcc" path="res://Scenes/day_night_panel.tscn" id="22_jhx1v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymrm4"]
@@ -77,7 +78,7 @@ offset_top = 0.5
 offset_right = 320.0
 offset_bottom = 186.0
 script = ExtResource("3_tyrku")
-item_datas = Array[ExtResource("4_ow1eo")]([ExtResource("5_k6pkm"), ExtResource("6_m13ki"), ExtResource("7_3mbjb"), ExtResource("8_jhx1v"), ExtResource("9_dvu38"), ExtResource("10_k7yfq"), ExtResource("11_6rctg"), ExtResource("12_1shhe"), ExtResource("13_n1qjt"), ExtResource("14_ik0jt")])
+item_datas = Array[ExtResource("4_ow1eo")]([ExtResource("6_3568l"), ExtResource("7_mjtuy"), ExtResource("8_cuuv1"), ExtResource("9_yl1pv"), ExtResource("10_dvu38"), ExtResource("11_k7yfq"), ExtResource("12_6rctg"), ExtResource("13_1shhe"), ExtResource("14_n1qjt"), ExtResource("15_ik0jt"), ExtResource("16_lkkvn")])
 
 [node name="ColorRect" type="ColorRect" parent="ShopUI/Shop" unique_id=1573354770]
 layout_mode = 1

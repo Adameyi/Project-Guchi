@@ -1,6 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1791362886
-appletree_sprite.png::CompressedTexture2D::1145517938433800402::1787881869::1789123231::1::::<><><>0<>0<>27bc8acd47e699bc482f9271bcac4db4<>res://.godot/imported/appletree_sprite.png-ed5f9bb6624e2f6ef7865338331f525b.ctex::
+::res://::1791463841
 README.md::TextFile::-1::1788354776::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1791010790
 placeholder_appletree.png::CompressedTexture2D::2234061113093075385::1787881936::1787881936::1::::<><><>0<>0<>634b95dbcbe01e9aedcf34c4f1d188ba<>res://.godot/imported/placeholder_appletree.png-91f2cc1839c20373cca36ea2b60283d9.ctex::
@@ -81,38 +80,37 @@ dialogue.json::JSON::-1::1790242820::0::1::::<><><>0<>0<><>::
 pixelFont-7-8x14-sproutLands.ttf::FontFile::209557597871474388::1790143860::1790143860::1::::<><><>0<>0<>5de4f11bb004c8a5f2ec99cbea3c1b1b<>res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-5188086db34e66a043b6c5bc0062040a.fontdata::
 SuperFrosting-R9z4o.ttf::FontFile::4432045129899408414::1789121204::1789121204::1::::<><><>0<>0<>9a4783d35368a588e7e57fdfc9c12484<>res://.godot/imported/SuperFrosting-R9z4o.ttf-6b2e2a3f15c886aff1a551a75df2b8ee.fontdata::
 ZX Palm.png::CompressedTexture2D::4858185736294941965::1790143860::1790143860::1::::<><><>0<>0<>1c7a1ab8836e63d8b7d0c649d96d96a3<>res://.godot/imported/ZX Palm.png-39e539d46c3b387e1d78ff26ada9029c.ctex::
-::res://Inventory/::1791344810
-item_inventory.gd::GDScript::6271576809802889527::1787614613::0::1::::Inventory_Item<>Resource<><>0<>0<><>::
-player_inventory.tres::Resource/Inventory::5649182158719492373::1791344810::0::1::::<><><>0<>0<><>::uid://c2fmvl26hkprc::::res://Scripts/inv_slot.gd<>uid://dx11qcwwrpo2v::::res://Scripts/inventory.gd
-::res://Inventory/items/::1790157612
+::res://Inventory/::1791417293
+item_inventory.gd::GDScript::6271576809802889527::1791417293::0::1::::Inventory_Item<>Resource<><>0<>0<><>::
+player_inventory.tres::Resource/Inventory::5649182158719492373::1791417293::0::1::::<><><>0<>0<><>::uid://c2fmvl26hkprc::::res://Scripts/inv_slot.gd<>uid://dx11qcwwrpo2v::::res://Scripts/inventory.gd
+::res://Inventory/items/::1791418410
 apple.tres::Resource/inventory_item::9159974870799885733::1789123223::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png
-blueberry_seed.tres::Resource/ShopItemData::8704982845859639733::1790155996::0::1::::<><><>0<>0<><>::uid://c287bixg6u7oj::::res://Assets/Items/blueberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-carrot_seed.tres::Resource/ShopItemData::4711220727882231865::1790155996::0::1::::<><><>0<>0<><>::uid://ertv2yjnwjjd::::res://Assets/Items/carrot_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-cauliflower_seed.tres::Resource/ShopItemData::3233852166638608480::1790157612::0::1::::<><><>0<>0<><>::uid://soewm2177ldt::::res://Assets/Items/cauliflower_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-eggplant_speed.tres::Resource/ShopItemData::7515541634259389882::1790155996::0::1::::<><><>0<>0<><>::uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd<>uid://bywfo4v3fxmpn::::res://Assets/Items/eggplant_seeds.png
-heartberry_seed.tres::Resource/ShopItemData::6255006035208566685::1790155996::0::1::::<><><>0<>0<><>::uid://iqcfm6ivjk8d::::res://Assets/Items/heartberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-magicberry_seed.tres::Resource/ShopItemData::6938614580167122844::1790155996::0::1::::<><><>0<>0<><>::uid://bj6ndgnl5fy2t::::res://Assets/Items/magicberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-onion_seed.tres::Resource/ShopItemData::277199234003514227::1790155996::0::1::::<><><>0<>0<><>::uid://cvl1agw6rujid::::res://Assets/Items/onion_speeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-potato_seed.tres::Resource/ShopItemData::7818575135830375630::1790155996::0::1::::<><><>0<>0<><>::uid://ct22kipb4o5da::::res://Assets/Items/potato_speeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-pumpkin_seed.tres::Resource/ShopItemData::1690853221702918073::1790155996::0::1::::<><><>0<>0<><>::uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd<>uid://wooc5ng8xm0o::::res://Assets/Items/pumpkin_seeds.png
-ShopItemData.gd::GDScript::2153481055448403718::1790131990::0::1::::ShopItemData<>Resource<><>0<>0<><>::
+blueberry_seed.tres::Resource/Inventory_Item::8704982845859639733::1791418242::0::1::::<><><>0<>0<><>::uid://c287bixg6u7oj::::res://Assets/Items/blueberry_seeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+carrot_seed.tres::Resource/Inventory_Item::4711220727882231865::1791418242::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://ertv2yjnwjjd::::res://Assets/Items/carrot_seeds.png
+cauliflower_seed.tres::Resource/Inventory_Item::3233852166638608480::1791418242::0::1::::<><><>0<>0<><>::uid://soewm2177ldt::::res://Assets/Items/cauliflower_seeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+eggplant_seed.tres::Resource/Inventory_Item::7515541634259389882::1791418410::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://bywfo4v3fxmpn::::res://Assets/Items/eggplant_seeds.png
+heartberry_seed.tres::Resource/Inventory_Item::6255006035208566685::1791418410::0::1::::<><><>0<>0<><>::uid://iqcfm6ivjk8d::::res://Assets/Items/heartberry_seeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+magicberry_seed.tres::Resource/Inventory_Item::6938614580167122844::1791418410::0::1::::<><><>0<>0<><>::uid://bj6ndgnl5fy2t::::res://Assets/Items/magicberry_seeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+onion_seed.tres::Resource/Inventory_Item::277199234003514227::1791418410::0::1::::<><><>0<>0<><>::uid://cvl1agw6rujid::::res://Assets/Items/onion_speeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+potato_seed.tres::Resource/Inventory_Item::7818575135830375630::1791418410::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://ct22kipb4o5da::::res://Assets/Items/potato_speeds.png
+pumpkin_seed.tres::Resource/Inventory_Item::1690853221702918073::1791418410::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://wooc5ng8xm0o::::res://Assets/Items/pumpkin_seeds.png
 sunflower_seed.tres::Resource/Inventory_Item::5618223982715794908::1789123240::0::1::::<><><>0<>0<><>::uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png
-turnip_seed.tres::Resource/ShopItemData::7312332202610401556::1790156039::0::1::::<><><>0<>0<><>::uid://dk8dkg4itbkjw::::res://Assets/Items/turnip_seeds.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd
-::res://Scenes/::1791358504
+turnip_seed.tres::Resource/Inventory_Item::7312332202610401556::1791418410::0::1::::<><><>0<>0<><>::uid://dk8dkg4itbkjw::::res://Assets/Items/turnip_seeds.png<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd
+::res://Scenes/::1791425843
 apple_collectable.tscn::PackedScene::717607473191694421::1789123223::0::1::::<><><>0<>0<><>::uid://mmhlwv7hidxk::::res://Scripts/apple_collectable.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png
-crops.tscn::PackedScene::8408421426841061719::1791358504::0::1::::<><><>0<>0<><>::uid://4sq3qghoj75j::::res://Scripts/crop.gd<>uid://bx272f4dqggk6::::res://Assets/Crops/pumpkin_crop.png<>uid://py2h5mslfx20::::res://Scripts/crop_data.gd
+crops.tscn::PackedScene::8408421426841061719::1791363048::0::1::::<><><>0<>0<><>::uid://4sq3qghoj75j::::res://Scripts/crop.gd<>uid://bx272f4dqggk6::::res://Assets/Crops/pumpkin_crop.png<>uid://py2h5mslfx20::::res://Scripts/crop_data.gd
 day_night_cycle.tscn::PackedScene::3130777546948957629::1791101145::0::1::::<><><>0<>0<><>::uid://0420ixddrwcc::::res://Scenes/day_night_panel.tscn<>res://Scenes/components/day_night_cycle_component.tscn
 day_night_panel.tscn::PackedScene::1816272505329171702::1790233016::0::1::::<><><>0<>0<><>::uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png<>uid://c8rna1hw7unk::::res://Fonts/pixelFont-7-8x14-sproutLands.ttf<>uid://mjyno2obelk7::::res://Scripts/ui/day_night_panel.gd
 dialogue.tscn::PackedScene::4525727247928017063::1790302704::0::1::::<><><>0<>0<><>::uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png<>uid://bx88wkd712jj4::::res://Scripts/autoloads/dialogue.gd<>uid://c8rna1hw7unk::::res://Fonts/pixelFont-7-8x14-sproutLands.ttf<>uid://bjdjrsjmcix7e::::res://Assets/NPCs/guchi_profile.png
-hotbar.tscn::PackedScene::3257367612448060150::1789123151::0::1::::<><><>0<>0<><>::uid://boo6s4fvlvvwo::::res://Scripts/hotbar.gd<>uid://d03xqtgoi7443::::res://Assets/PlayerUI/tool-inventory-background.png<>uid://els0cwr2pb6f::::res://Scripts/hotbar_tool.gd<>uid://d3hw06j30tai8::::res://Assets/PlayerUI/tool-inventory-indicator-up.png<>uid://c324w4u8m0a62::::res://Scripts/hotbar_tool_indicator_up.gd<>uid://de07pau6l11rg::::res://Scripts/hotbar_tool_indicator_down.gd<>uid://c7xksi7qmxid7::::res://Assets/PlayerUI/tool-inventory-indicator-down.png
+hotbar.tscn::PackedScene::3257367612448060150::1791422983::0::1::::<><><>0<>0<><>::uid://boo6s4fvlvvwo::::res://Scripts/hotbar.gd<>uid://d03xqtgoi7443::::res://Assets/PlayerUI/tool-inventory-background.png<>uid://els0cwr2pb6f::::res://Scripts/hotbar_tool.gd<>uid://d3hw06j30tai8::::res://Assets/PlayerUI/tool-inventory-indicator-up.png<>uid://c324w4u8m0a62::::res://Scripts/hotbar_tool_indicator_up.gd<>uid://de07pau6l11rg::::res://Scripts/hotbar_tool_indicator_down.gd<>uid://c7xksi7qmxid7::::res://Assets/PlayerUI/tool-inventory-indicator-down.png
 hotbar_slot.tscn::PackedScene::9000058631898798793::1789123143::0::1::::<><><>0<>0<><>::uid://cvl4skae4gcqj::::res://Assets/PlayerUI/inventory-slot.png<>uid://crrq8jvdjeyi6::::res://Assets/PlayerUI/inventory-slot-selected.png<>uid://412lofy1hc5q::::res://Assets/PlayerUI/inventory-slot-hovered.png<>uid://du7nqss5o5yev::::res://Scripts/slots.gd
 inv_ui.tscn::PackedScene::6381514017385845713::1789123188::0::1::::<><><>0<>0<><>::uid://d288cpklc2bpo::::res://Scripts/inv_ui.gd<>uid://5aum8eabmp6u::::res://Assets/PlayerUI/inventory-background.png<>uid://b4l00kbluag0d::::res://Scenes/inv_ui_slot.tscn
 inv_ui_slot.tscn::PackedScene::4446168401462311757::1789123143::0::1::::<><><>0<>0<><>::uid://cvl4skae4gcqj::::res://Assets/PlayerUI/inventory-slot.png<>uid://counmf11inn6s::::res://Scripts/inv_ui_slot.gd
 loading_screen.tscn::PackedScene::9136911096442489925::1789114548::0::1::::<><><>0<>0<><>::uid://jl4tg246juja::::res://scripts/loading_screen.gd
-main.tscn::PackedScene::2905306707316357865::1791351509::0::1::::<><><>0<>0<><>::uid://b11aiqiq3kfqj::::res://Scripts/main.gd<>uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://c5qu3yocgtyx3::::res://Scenes/trees.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://bkutpi2c12djh::::res://Scenes/day_night_cycle.tscn<>uid://dy6ayg677fq0w::::res://Scripts/autoloads/economy.gd<>uid://bbk0pfiyxscjn::::res://Scripts/autoloads/dialogue_manager.gd<>uid://n5j2ftbjt33w::::res://Scenes/save_manager.tscn<>uid://cgc2r55bkj0mo::::res://Scenes/ui/options.tscn<>uid://ci4ns7gqkuw4h::::res://Scenes/ui/escape_menu_ui.tscn<>uid://71120miaepmp::::res://Scenes/interaction/treasure_chest.tscn
+main.tscn::PackedScene::2905306707316357865::1791423949::0::1::::<><><>0<>0<><>::uid://b11aiqiq3kfqj::::res://Scripts/main.gd<>uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://c5qu3yocgtyx3::::res://Scenes/trees.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://bkutpi2c12djh::::res://Scenes/day_night_cycle.tscn<>uid://dy6ayg677fq0w::::res://Scripts/autoloads/economy.gd<>uid://bbk0pfiyxscjn::::res://Scripts/autoloads/dialogue_manager.gd<>uid://n5j2ftbjt33w::::res://Scenes/save_manager.tscn<>uid://cgc2r55bkj0mo::::res://Scenes/ui/options.tscn<>uid://ci4ns7gqkuw4h::::res://Scenes/ui/escape_menu_ui.tscn<>uid://71120miaepmp::::res://Scenes/interaction/treasure_chest.tscn
 player.tscn::PackedScene::2351291673900278274::1790163471::0::1::::<><><>0<>0<><>::uid://dvy8nomcs7l03::::res://Scripts/player.gd<>uid://6qgie7lriv3w::::res://Scripts/run.gd<>uid://bgbq73kdtqrhq::::res://Assets/Spritesheets/catidle_animation.png<>uid://cmqrg70nkd0ij::::res://Inventory/player_inventory.tres<>uid://dvvxnyo7a4ptb::::res://Assets/Spritesheets/catrun_animation.png<>uid://cw6iurwtpwn58::::res://Scenes/inv_ui.tscn<>uid://bmn5msggsdxqc::::res://Scenes/hotbar.tscn<>uid://bn0qbaa034rm5::::res://Scenes/interaction/interacting_component.tscn
 save_manager.tscn::PackedScene::974981261312821830::1791096344::0::1::::<><><>0<>0<><>::uid://dl2fopqy55332::::res://Scripts/autoloads/save_manager.gd
-shop.tscn::PackedScene::5691144397170083402::1790855559::0::1::::<><><>0<>0<><>::uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://71120miaepmp::::res://Scenes/interaction/treasure_chest.tscn<>uid://bjleym7ylox5t::::res://Assets/ShopUI/shop_background.png<>uid://trad6e0n1pab::::res://Scripts/shop/shop.gd<>uid://dlrud7e82kvdu::::res://Assets/ShopUI/shop_item_panel_normal.png<>uid://5xfrvhpnyjm1::::res://Inventory/items/ShopItemData.gd<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png<>uid://b81x0lkgsavgk::::res://Scripts/shop/store_item.gd<>uid://dwa02b1rvhvur::::res://Inventory/items/blueberry_seed.tres<>uid://fmntw1p538j0::::res://Assets/ShopUI/shop_exit_sign.png<>uid://b8efd8llg2dkb::::res://Inventory/items/carrot_seed.tres<>uid://dqxva6vgftmpf::::res://Assets/ShopUI/shop_buy_button_normal.png<>uid://bmcrcqb507u1m::::res://Inventory/items/cauliflower_seed.tres<>uid://dfct4w25hedio::::res://Inventory/items/eggplant_speed.tres<>uid://cvd8bhcs1q6b6::::res://Inventory/items/heartberry_seed.tres<>uid://c54d76pv4duhw::::res://Inventory/items/magicberry_seed.tres<>uid://d7jowdq1c12f::::res://Inventory/items/onion_seed.tres<>uid://djnm14pgwbgnu::::res://Inventory/items/potato_seed.tres<>uid://ydcdt8spqdnd::::res://Inventory/items/pumpkin_seed.tres<>uid://dcgfbp0lcc4vg::::res://Inventory/items/turnip_seed.tres
+shop.tscn::PackedScene::5691144397170083402::1791425843::0::1::::<><><>0<>0<><>::uid://8q8ovqelp60m::::res://Scenes/player.tscn<>uid://dqwh6j76folhu::::res://Scenes/terrain.tscn<>uid://71120miaepmp::::res://Scenes/interaction/treasure_chest.tscn<>uid://bjleym7ylox5t::::res://Assets/ShopUI/shop_background.png<>uid://trad6e0n1pab::::res://Scripts/shop/shop.gd<>uid://dlrud7e82kvdu::::res://Assets/ShopUI/shop_item_panel_normal.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png<>uid://b81x0lkgsavgk::::res://Scripts/shop/store_item.gd<>uid://fmntw1p538j0::::res://Assets/ShopUI/shop_exit_sign.png<>uid://jjgpqw4w4h1a::::res://Shop/items/blueberry_seed.tres<>uid://dqxva6vgftmpf::::res://Assets/ShopUI/shop_buy_button_normal.png<>uid://bid4fba4l807q::::res://Shop/items/carrot_seed.tres<>uid://bsdre8sirrb7b::::res://Shop/items/cauliflower_seed.tres<>uid://yfafmitpeefs::::res://Shop/items/eggplant_speed.tres<>uid://df7hwsj6xe2ff::::res://Shop/items/heartberry_seed.tres<>uid://b232v3e7vv0yc::::res://Shop/items/magicberry_seed.tres<>uid://dtrdbeaoiv4m6::::res://Shop/items/onion_seed.tres<>uid://c2hjkoi8xvws2::::res://Shop/items/potato_seed.tres<>uid://cujehukymg750::::res://Shop/items/pumpkin_seed.tres<>uid://bxeaeun7vugpg::::res://Shop/items/sunflower_seed.tres<>uid://36xnhht7dop1::::res://Shop/items/turnip_seed.tres<>uid://0420ixddrwcc::::res://Scenes/day_night_panel.tscn
 terrain.tscn::PackedScene::8328180761997189070::1789128131::0::1::::<><><>0<>0<><>::uid://bwc0ph3t3cx1p::::res://Scripts/terrain_hover.gd<>uid://btbom0j4xg5uf::::res://Assets/Tilemap/grass.png<>uid://dr2dqcd1jja5d::::res://Scenes/crops.tscn<>uid://djghn3wbgbp7s::::res://Assets/Tilemap/plains.png<>uid://bo8sml1rr3knq::::res://Assets/SelectionUI/selection.png<>uid://digliatosobmj::::res://Assets/Tilemap/Wooden House.png<>uid://b7xs3ggv4dmb0::::res://Assets/Tilemap/Wooden_House_Roof_Tilset.png<>uid://rmg3fg6ego71::::res://Assets/Tilemap/Wooden_House_Walls_Tilset.png
 trees.tscn::PackedScene::6912802344964125890::1789123223::0::1::::<><><>0<>0<><>::uid://b6mnumqyva4s3::::res://Scripts/apple_tree.gd<>uid://cvl87os6lniip::::res://Inventory/item_inventory.gd<>uid://bhorpvktikasv::::res://Assets/Items/apple.png<>uid://63gwpd3p0fqn::::res://Assets/placeholder_appletree.png<>uid://d08wbh8tjebsy::::res://Assets/placeholder_tree.png
 ::res://Scenes/components/::1791101145
@@ -122,17 +120,17 @@ day_night_cycle_component.tscn::PackedScene::-1::1790144064::0::1::::<><><>0<>0<
 interactable.tscn::PackedScene::6915638677924810789::1789123938::0::1::::<><><>0<>0<><>::uid://ck5exvy78tk2u::::res://Scripts/interaction/interactable.gd
 interacting_component.tscn::PackedScene::3351458353691647682::1789124346::0::1::::<><><>0<>0<><>::uid://b4e6eu65mscyw::::res://Fonts/SuperFrosting-R9z4o.ttf<>uid://bqd7yxucus01n::::res://Scripts/interaction/interacting_component.gd
 treasure_chest.tscn::PackedScene::2301345008255015683::1790171703::0::1::::<><><>0<>0<><>::uid://d3iekudq0q25c::::res://Scripts/interaction/entity_interact.gd<>uid://dghmhhpncvmye::::res://Assets/Interactables/treasure.png<>uid://dqrn2udunkik8::::res://Assets/Interactables/treasure2.png<>uid://c5r8s81ya3qw0::::res://Scenes/interaction/interactable.tscn
-::res://Scenes/ui/::1791351154
+::res://Scenes/ui/::1791363815
 day_night_cycle_component.gd::GDScript::6862966257873434463::1790144024::0::1::::DayNightCycleComponent<>CanvasModulate<><>0<>0<><>::
 day_night_cycle_component.tscn::PackedScene::301295473494039795::1790145606::0::1::::<><><>0<>0<><>::res://Scenes/components/day_night_cycle_component.gd
-escape_menu_ui.tscn::PackedScene::5395042227311620601::1791351154::0::1::::<><><>0<>0<><>::uid://ps0rcr2svgqs::::res://Scripts/ui/escape_menu_ui.gd<>uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png<>uid://bjdjrsjmcix7e::::res://Assets/NPCs/guchi_profile.png<>uid://df7n2wcky0ydi::::res://Assets/MenuUI/save_icon.png<>uid://1j36kmpn50j2::::res://Assets/MenuUI/edit_icon.png
-options.tscn::PackedScene::5199774524127412370::1791350398::0::1::::<><><>0<>0<><>::uid://cunns2a50ekqc::::res://Scripts/ui/options.gd<>uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png
-::res://Scripts/::1791358504
+escape_menu_ui.tscn::PackedScene::5395042227311620601::1791363407::0::1::::<><><>0<>0<><>::uid://ps0rcr2svgqs::::res://Scripts/ui/escape_menu_ui.gd<>uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png<>uid://bjdjrsjmcix7e::::res://Assets/NPCs/guchi_profile.png<>uid://df7n2wcky0ydi::::res://Assets/MenuUI/save_icon.png<>uid://1j36kmpn50j2::::res://Assets/MenuUI/edit_icon.png
+options.tscn::PackedScene::5199774524127412370::1791363815::0::1::::<><><>0<>0<><>::uid://cunns2a50ekqc::::res://Scripts/ui/options.gd<>uid://dqillv28ds6eg::::res://Assets/Spritesheets/Sprite sheet for Basic Pack.png
+::res://Scripts/::1791422983
 apple_collectable.gd::GDScript::867484508805627540::1787954937::0::1::::<>Node2D<><>0<>0<><>::
 apple_tree.gd::GDScript::4587873062420504004::1789123831::0::1::::<>Node2D<><>0<>0<><>::
-crop.gd::GDScript::2073657589169192845::1791358504::0::1::::<>Node2D<><>0<>0<><>::
-crop_data.gd::GDScript::1104031175100867875::1791354910::0::1::::CropData<>Resource<><>0<>0<><>::
-hotbar.gd::GDScript::3399881686119310086::1788309734::0::1::::<>HBoxContainer<><>0<>0<><>::
+crop.gd::GDScript::2073657589169192845::1791363407::0::1::::<>Node2D<><>0<>0<><>::
+crop_data.gd::GDScript::1104031175100867875::1791364011::0::1::::CropData<>Resource<><>0<>0<><>::
+hotbar.gd::GDScript::3399881686119310086::1791422983::0::1::::<>HBoxContainer<><>0<>0<><>::
 hotbar_tool.gd::GDScript::304601220405678319::1790145445::0::1::::<>TextureButton<><>0<>0<><>::
 hotbar_tool_indicator_down.gd::GDScript::7493596632480366096::1788232643::0::1::::<>TextureButton<><>0<>0<><>::
 hotbar_tool_indicator_up.gd::GDScript::6795668824456489185::1788232177::0::1::::<>TextureButton<><>0<>0<><>::
@@ -143,13 +141,13 @@ inv_ui_slot.gd::GDScript::5797583787806878092::1787888131::0::1::::<>Control<><>
 loading_screen.gd::GDScript::7592968013093681290::1789114333::0::1::::<>CanvasLayer<><>0<>0<><>::
 main.gd::GDScript::4265019579735557581::1790301216::0::1::::<>Node2D<><>0<>0<><>::
 player.gd::GDScript::8684800463638226042::1787881226::0::1::::<>Node2D<><>0<>0<><>::
-run.gd::GDScript::2209263045201787218::1790145488::0::1::::<>CharacterBody2D<><>0<>0<><>::
+run.gd::GDScript::2209263045201787218::1791364117::0::1::::<>CharacterBody2D<><>0<>0<><>::
 slots.gd::GDScript::8629917880188066573::1788311126::0::1::::<>TextureButton<><>0<>0<><>::
-terrain_hover.gd::GDScript::3936249122784439311::1791351320::0::1::::<>Node2D<><>0<>0<><>::
-::res://Scripts/autoloads/::1791290727
+terrain_hover.gd::GDScript::3936249122784439311::1791416986::0::1::::<>Node2D<><>0<>0<><>::
+::res://Scripts/autoloads/::1791425843
 dialogue.gd::GDScript::4070932032836684459::1790302704::0::1::::<>CanvasLayer<><>0<>0<><>::
-dialogue_manager.gd::GDScript::2478798292696548295::1790301684::0::1::::<>Node<><>0<>0<><>::
-economy.gd::GDScript::8907833232347600912::1790165412::0::1::::<>Node<><>0<>0<><>::
+dialogue_manager.gd::GDScript::2478798292696548295::1791365724::0::1::::<>Node<><>0<>0<><>::
+economy.gd::GDScript::8907833232347600912::1791425843::0::1::::<>Node<><>0<>0<><>::
 save_manager.gd::GDScript::7987406930234649747::1791290727::0::1::::<>Node<><>0<>0<><>::
 scene_loader.gd::GDScript::6628163680246409672::1789114585::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/globals/::1791290606
@@ -158,10 +156,24 @@ day_night_cycle_manager.gd::GDScript::1575623960702402101::1791290606::0::1::::<
 entity_interact.gd::GDScript::9141326476749255354::1790263673::0::1::::<>StaticBody2D<><>0<>0<><>::
 interactable.gd::GDScript::5536946219183648634::1789120630::0::1::::<>Area2D<><>0<>0<><>::
 interacting_component.gd::GDScript::3517622357037519349::1789124346::0::1::::<>Node2D<><>0<>0<><>::
-::res://Scripts/shop/::1790263478
-shop.gd::GDScript::1368689443880715517::1790263478::0::1::::<>Control<><>0<>0<><>::
-store_item.gd::GDScript::4757768074536561802::1790168331::0::1::::StoreItem<>VBoxContainer<><>0<>0<><>::
+::res://Scripts/shop/::1791425189
+shop.gd::GDScript::1368689443880715517::1791425189::0::1::::<>Control<><>0<>0<><>::
+store_item.gd::GDScript::4757768074536561802::1791423926::0::1::::StoreItem<>VBoxContainer<><>0<>0<><>::
 ::res://Scripts/ui/::1791351154
 day_night_panel.gd::GDScript::862326724264309200::1791096607::0::1::::<>Control<><>0<>0<><>::
 escape_menu_ui.gd::GDScript::1091539870019125298::1791351154::0::1::::<>CanvasLayer<><>0<>0<><>::
 options.gd::GDScript::6204278035672973370::1791350398::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://Shop/::1791417798
+ShopItemData.gd::GDScript::2153481055448403718::1791417332::0::1::::ShopItemData<>Resource<><>0<>0<><>::
+::res://Shop/items/::1791425189
+blueberry_seed.tres::Resource/ShopItemData::650670957101476600::1791422846::0::1::::<><><>0<>0<><>::uid://c287bixg6u7oj::::res://Assets/Items/blueberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://dwa02b1rvhvur::::res://Inventory/items/blueberry_seed.tres
+carrot_seed.tres::Resource/ShopItemData::2955894341676295564::1791424893::0::1::::<><><>0<>0<><>::uid://ertv2yjnwjjd::::res://Assets/Items/carrot_seeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://b8efd8llg2dkb::::res://Inventory/items/carrot_seed.tres
+cauliflower_seed.tres::Resource/ShopItemData::3657054095956418525::1791424893::0::1::::<><><>0<>0<><>::uid://soewm2177ldt::::res://Assets/Items/cauliflower_seeds.png<>uid://bmcrcqb507u1m::::res://Inventory/items/cauliflower_seed.tres<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd
+eggplant_speed.tres::Resource/ShopItemData::1694863708574717756::1791424893::0::1::::<><><>0<>0<><>::uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://bywfo4v3fxmpn::::res://Assets/Items/eggplant_seeds.png<>uid://dfct4w25hedio::::res://Inventory/items/eggplant_seed.tres
+heartberry_seed.tres::Resource/ShopItemData::7576731624577615691::1791424893::0::1::::<><><>0<>0<><>::uid://iqcfm6ivjk8d::::res://Assets/Items/heartberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://cvd8bhcs1q6b6::::res://Inventory/items/heartberry_seed.tres
+magicberry_seed.tres::Resource/ShopItemData::4341000377826219918::1791424893::0::1::::<><><>0<>0<><>::uid://bj6ndgnl5fy2t::::res://Assets/Items/magicberry_seeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://c54d76pv4duhw::::res://Inventory/items/magicberry_seed.tres
+onion_seed.tres::Resource/ShopItemData::8528128649534185491::1791424893::0::1::::<><><>0<>0<><>::uid://cvl1agw6rujid::::res://Assets/Items/onion_speeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://d7jowdq1c12f::::res://Inventory/items/onion_seed.tres
+potato_seed.tres::Resource/ShopItemData::6682955849981735567::1791424893::0::1::::<><><>0<>0<><>::uid://ct22kipb4o5da::::res://Assets/Items/potato_speeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://djnm14pgwbgnu::::res://Inventory/items/potato_seed.tres
+pumpkin_seed.tres::Resource/ShopItemData::6195454075483595013::1791424893::0::1::::<><><>0<>0<><>::uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd<>uid://wooc5ng8xm0o::::res://Assets/Items/pumpkin_seeds.png<>uid://ydcdt8spqdnd::::res://Inventory/items/pumpkin_seed.tres
+sunflower_seed.tres::Resource/ShopItemData::4009029813591955020::1791425189::0::1::::<><><>0<>0<><>::uid://cmbrlfmdn2o2g::::res://Inventory/items/sunflower_seed.tres<>uid://cypdiim6qwvse::::res://Assets/Items/sunflower_seeds.png<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd
+turnip_seed.tres::Resource/ShopItemData::2030703417778404488::1791424893::0::1::::<><><>0<>0<><>::uid://dk8dkg4itbkjw::::res://Assets/Items/turnip_seeds.png<>uid://dcgfbp0lcc4vg::::res://Inventory/items/turnip_seed.tres<>uid://5xfrvhpnyjm1::::res://Shop/ShopItemData.gd

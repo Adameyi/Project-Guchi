@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://bxeaeun7vugpg"]
+
+[ext_resource type="Resource" uid="uid://cmbrlfmdn2o2g" path="res://Inventory/items/sunflower_seed.tres" id="2_3n3qb"]
+[ext_resource type="Texture2D" uid="uid://cypdiim6qwvse" path="res://Assets/Items/sunflower_seeds.png" id="2_5qbqs"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Shop/ShopItemData.gd" id="3_3n3qb"]
+
+[resource]
+script = ExtResource("3_3n3qb")
+id = &"dafc6ha5mjmio"
+display_name = "Sunflower Seeds"
+icon = ExtResource("2_5qbqs")
+price = 1.0
+stock = 20
+item = ExtResource("2_3n3qb")

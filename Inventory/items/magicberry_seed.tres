@@ -1,12 +1,9 @@
-[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://c54d76pv4duhw"]
+[gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://c54d76pv4duhw"]
 
 [ext_resource type="Texture2D" uid="uid://bj6ndgnl5fy2t" path="res://Assets/Items/magicberry_seeds.png" id="1_7ewt7"]
-[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_17sgn"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_28fa8"]
 
 [resource]
-script = ExtResource("1_17sgn")
-id = &"c54d76pv4duhw"
-display_name = "Magicberry Seeds"
-icon = ExtResource("1_7ewt7")
-price = 200.0
-stock = 5
+script = ExtResource("1_28fa8")
+name = "Magicberry Seeds"
+texture = ExtResource("1_7ewt7")

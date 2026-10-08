@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://bsdre8sirrb7b"]
+
+[ext_resource type="Texture2D" uid="uid://soewm2177ldt" path="res://Assets/Items/cauliflower_seeds.png" id="1_q8xmo"]
+[ext_resource type="Resource" uid="uid://bmcrcqb507u1m" path="res://Inventory/items/cauliflower_seed.tres" id="2_8jcrl"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Shop/ShopItemData.gd" id="2_yj24h"]
+
+[resource]
+script = ExtResource("2_yj24h")
+id = &"bmcrcqb507u1m"
+display_name = "Cauliflower Seeds"
+icon = ExtResource("1_q8xmo")
+price = 8.0
+stock = 20
+item = ExtResource("2_8jcrl")

@@ -1,12 +1,9 @@
-[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://d7jowdq1c12f"]
+[gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://d7jowdq1c12f"]
 
 [ext_resource type="Texture2D" uid="uid://cvl1agw6rujid" path="res://Assets/Items/onion_speeds.png" id="1_u3i11"]
-[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_vgfpc"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_vgfpc"]
 
 [resource]
 script = ExtResource("1_vgfpc")
-id = &"d7jowdq1c12f"
-display_name = "Onion Seeds"
-icon = ExtResource("1_u3i11")
-price = 2.0
-stock = 200
+name = "Onion Seeds"
+texture = ExtResource("1_u3i11")

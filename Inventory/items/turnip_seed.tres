@@ -1,12 +1,9 @@
-[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://dcgfbp0lcc4vg"]
+[gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://dcgfbp0lcc4vg"]
 
 [ext_resource type="Texture2D" uid="uid://dk8dkg4itbkjw" path="res://Assets/Items/turnip_seeds.png" id="1_r5oqn"]
-[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="2_xlfhh"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_xlfhh"]
 
 [resource]
-script = ExtResource("2_xlfhh")
-id = &"dk8dkg4itbkjw"
-display_name = "Turnip Seeds"
-icon = ExtResource("1_r5oqn")
-price = 6.0
-stock = 60
+script = ExtResource("1_xlfhh")
+name = "Turnip Seeds"
+texture = ExtResource("1_r5oqn")

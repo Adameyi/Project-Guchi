@@ -36,8 +36,11 @@ func _ready() -> void:
 		else:
 			_item_nodes[i].hide() #Fewer data entries than slots.
 
+	print('shown: ', item_datas.map(func(d): return d.display_name if d else 'EMPTY'))
+
 func _open_shop() -> void:
 	print('opening shop')
+	print('opening shop | item_datas: ', item_datas.size(), ' | store_item_nodes: ', _item_nodes.size())
 	shop.show()
 
 func _exit_shop() -> void:

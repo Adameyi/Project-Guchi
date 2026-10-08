@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-@onready var inventory: Inventory = preload('res://inventory/player_inventory.tres')
+@onready var inventory: Inventory = preload('res://Inventory/player_inventory.tres')
 
 const SLOT_SCENE = preload('res://Scenes/hotbar_slot.tscn')
 const SLOT_COUNT = 9

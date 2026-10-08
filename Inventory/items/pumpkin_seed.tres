@@ -1,12 +1,9 @@
-[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://ydcdt8spqdnd"]
+[gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://ydcdt8spqdnd"]
 
-[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Inventory/items/ShopItemData.gd" id="1_0sl0m"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_f6r3s"]
 [ext_resource type="Texture2D" uid="uid://wooc5ng8xm0o" path="res://Assets/Items/pumpkin_seeds.png" id="1_yk2r6"]
 
 [resource]
-script = ExtResource("1_0sl0m")
-id = &"ydcdt8spqdnd"
-display_name = "Pumpkin Seeds"
-icon = ExtResource("1_yk2r6")
-price = 25.0
-stock = 20
+script = ExtResource("1_f6r3s")
+name = "Pumpkin Seeds"
+texture = ExtResource("1_yk2r6")

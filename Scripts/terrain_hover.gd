@@ -5,7 +5,7 @@ extends Node2D
 @onready var hotbar_slots = $"../Player/CharacterBody2D/Hotbar/Slots"
 
 const SUNFLOWER_SEED = preload("uid://cmbrlfmdn2o2g")
-
+const SUNFLOWER_CROP_DATA = preload("res://Inventory/items/sunflower_seed.tres")
 
 @onready var grass: TileMapLayer = $Grass
 @onready var dirt: TileMapLayer = $Dirt
@@ -73,18 +73,23 @@ func water_crop(tile_coords: Vector2i):
 			crop.watered()
 			
 func plant_seed(tile_coords: Vector2i):
-		if planted_crops.has(tile_coords):
-			print('Planting Seed.')
-			var crop = planted_crops[tile_coords]
-			crop.grow()
+		
+		if not planted_crops.has(tile_coords):
+			return 
+		var crop = planted_crops[tile_coords]
+		if crop.is_planted:
 			return
 		
 		var slot = inventory.slots[hotbar_slots.selected_index]
-		if slot.item == SUNFLOWER_SEED and slot.amount > 0:
-			slot.amount -= 1
-			if slot.amount <= 0:
-				slot.item = null
-			inventory.update.emit()
+		if slot.item != SUNFLOWER_SEED or slot.amount <= 0:
+			return
+		
+		# Plant and use up seed
+		crop.plant(SUNFLOWER_CROP_DATA)	
+		slot.amount -= 1
+		if slot.amount <= 0:
+			slot.item = null
+		inventory.update.emit()
 
 func harvest_crop(tile_coords: Vector2i) -> void:
 	var crop = planted_crops[tile_coords]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemData" format=3 uid="uid://jjgpqw4w4h1a"]
+
+[ext_resource type="Texture2D" uid="uid://c287bixg6u7oj" path="res://Assets/Items/blueberry_seeds.png" id="1_7ubor"]
+[ext_resource type="Script" uid="uid://5xfrvhpnyjm1" path="res://Shop/ShopItemData.gd" id="1_ck622"]
+[ext_resource type="Resource" uid="uid://dwa02b1rvhvur" path="res://Inventory/items/blueberry_seed.tres" id="2_87v7n"]
+
+[resource]
+script = ExtResource("1_ck622")
+id = &"dwa02b1rvhvur"
+display_name = "Blueberry Seeds"
+icon = ExtResource("1_7ubor")
+price = 5.0
+stock = 20
+item = ExtResource("2_87v7n")
