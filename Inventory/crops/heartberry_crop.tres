@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://bx77p0l5whqvi"]
+
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_oaje5"]
+[ext_resource type="Texture2D" uid="uid://d4i0ppaticl0g" path="res://Assets/Items/heartberry.png" id="2_l1d8p"]
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="3_6m1de"]
+[ext_resource type="Texture2D" uid="uid://gn6vifre33by" path="res://Assets/Crops/heartberry_crop.png" id="4_5tdj1"]
+
+[sub_resource type="Resource" id="Resource_8obju"]
+script = ExtResource("1_oaje5")
+name = "Heartberry"
+texture = ExtResource("2_l1d8p")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv46q"]
+atlas = ExtResource("4_5tdj1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loagc"]
+atlas = ExtResource("4_5tdj1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i5ih"]
+atlas = ExtResource("4_5tdj1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha0o4"]
+atlas = ExtResource("4_5tdj1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfy41"]
+atlas = ExtResource("4_5tdj1")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vovn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv46q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loagc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i5ih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha0o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfy41")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv46q")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loagc")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i5ih")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha0o4")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfy41")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("3_6m1de")
+crop_name = "heartberry_crop"
+sprite_frames = SubResource("SpriteFrames_1vovn")
+harvest_item = SubResource("Resource_8obju")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://eqedkhwd5h3e"]
+
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_fqoiq"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_i2x3l"]
+[ext_resource type="Texture2D" uid="uid://yn2bdrykggbs" path="res://Assets/Items/eggplant.png" id="2_1u2kx"]
+[ext_resource type="Texture2D" uid="uid://ccevg11wi67n8" path="res://Assets/Crops/eggplant_crop.png" id="3_1u2kx"]
+
+[sub_resource type="Resource" id="Resource_4ckos"]
+script = ExtResource("1_i2x3l")
+name = "Eggplant"
+texture = ExtResource("2_1u2kx")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8sh2"]
+atlas = ExtResource("3_1u2kx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xespy"]
+atlas = ExtResource("3_1u2kx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87po2"]
+atlas = ExtResource("3_1u2kx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umalt"]
+atlas = ExtResource("3_1u2kx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vcjr"]
+atlas = ExtResource("3_1u2kx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8gac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8sh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xespy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87po2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umalt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vcjr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8sh2")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xespy")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87po2")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umalt")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vcjr")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_fqoiq")
+crop_name = "eggplant_crop"
+sprite_frames = SubResource("SpriteFrames_j8gac")
+harvest_item = SubResource("Resource_4ckos")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

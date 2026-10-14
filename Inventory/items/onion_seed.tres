@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://d7jowdq1c12f"]
 
+[ext_resource type="Resource" uid="uid://csbtg87pofmbu" path="res://Inventory/crops/onion_crop.tres" id="1_ihqyw"]
 [ext_resource type="Texture2D" uid="uid://cvl1agw6rujid" path="res://Assets/Items/onion_speeds.png" id="1_u3i11"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_vgfpc"]
 
@@ -7,3 +8,4 @@
 script = ExtResource("1_vgfpc")
 name = "Onion Seeds"
 texture = ExtResource("1_u3i11")
+crop_data = ExtResource("1_ihqyw")

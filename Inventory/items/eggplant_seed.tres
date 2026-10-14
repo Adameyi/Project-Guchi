@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://dfct4w25hedio"]
 
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_cj1ms"]
+[ext_resource type="Resource" uid="uid://eqedkhwd5h3e" path="res://Inventory/crops/eggplant_crop.tres" id="1_mjcoa"]
 [ext_resource type="Texture2D" uid="uid://bywfo4v3fxmpn" path="res://Assets/Items/eggplant_seeds.png" id="2_mjcoa"]
 
 [resource]
 script = ExtResource("1_cj1ms")
 name = "Eggplant Seeds"
 texture = ExtResource("2_mjcoa")
+crop_data = ExtResource("1_mjcoa")

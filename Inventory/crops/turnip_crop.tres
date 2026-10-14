@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://c18m5kf3o55fj"]
+
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_e8hjr"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_s6une"]
+[ext_resource type="Texture2D" uid="uid://cx02amxf8vnak" path="res://Assets/Crops/turnip_crop.png" id="3_ddaq1"]
+
+[sub_resource type="Resource" id="Resource_qhgps"]
+script = ExtResource("1_s6une")
+name = "Turnip"
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjmns"]
+atlas = ExtResource("3_ddaq1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t1hb"]
+atlas = ExtResource("3_ddaq1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wvl4"]
+atlas = ExtResource("3_ddaq1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axnb3"]
+atlas = ExtResource("3_ddaq1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4di5n"]
+atlas = ExtResource("3_ddaq1")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8hjr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjmns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t1hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wvl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4di5n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjmns")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t1hb")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wvl4")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnb3")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4di5n")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_e8hjr")
+crop_name = "turnip_crop"
+sprite_frames = SubResource("SpriteFrames_e8hjr")
+harvest_item = SubResource("Resource_qhgps")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

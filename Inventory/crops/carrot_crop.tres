@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://nk7u2h0bu71s"]
+
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_1fwe3"]
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_hg4ub"]
+[ext_resource type="Texture2D" uid="uid://bycvsogapyum3" path="res://Assets/Items/carrot.png" id="2_ck06i"]
+[ext_resource type="Texture2D" uid="uid://brsi4pru5nhft" path="res://Assets/Crops/carrot_crop.png" id="2_kxlng"]
+
+[sub_resource type="Resource" id="Resource_x6pcw"]
+script = ExtResource("1_1fwe3")
+name = "Carrot"
+texture = ExtResource("2_ck06i")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tra5"]
+atlas = ExtResource("2_kxlng")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fwe3"]
+atlas = ExtResource("2_kxlng")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck06i"]
+atlas = ExtResource("2_kxlng")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkyuf"]
+atlas = ExtResource("2_kxlng")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vovn"]
+atlas = ExtResource("2_kxlng")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otssw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tra5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fwe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck06i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkyuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vovn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tra5")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fwe3")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck06i")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkyuf")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vovn")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_hg4ub")
+crop_name = "carrot_crop"
+sprite_frames = SubResource("SpriteFrames_otssw")
+harvest_item = SubResource("Resource_x6pcw")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

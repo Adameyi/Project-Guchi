@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://dwa02b1rvhvur"]
 
+[ext_resource type="Resource" uid="uid://deffyjrkb8p1v" path="res://Inventory/crops/blueberry_crop.tres" id="1_7kf8p"]
 [ext_resource type="Texture2D" uid="uid://c287bixg6u7oj" path="res://Assets/Items/blueberry_seeds.png" id="1_7ubor"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_ocdbw"]
 
@@ -7,3 +8,4 @@
 script = ExtResource("1_ocdbw")
 name = "Blueberry Seeds"
 texture = ExtResource("1_7ubor")
+crop_data = ExtResource("1_7kf8p")

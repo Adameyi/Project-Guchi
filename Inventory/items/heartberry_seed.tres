@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://cvd8bhcs1q6b6"]
 
 [ext_resource type="Texture2D" uid="uid://iqcfm6ivjk8d" path="res://Assets/Items/heartberry_seeds.png" id="1_hqkq0"]
+[ext_resource type="Resource" uid="uid://bx77p0l5whqvi" path="res://Inventory/crops/heartberry_crop.tres" id="1_ld5xf"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_wr1xy"]
 
 [resource]
 script = ExtResource("1_wr1xy")
 name = "Heartberry Seeds"
 texture = ExtResource("1_hqkq0")
+crop_data = ExtResource("1_ld5xf")

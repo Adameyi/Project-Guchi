@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://c4skye0m1fukd"]
+
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_b2o5d"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_dhr44"]
+[ext_resource type="Texture2D" uid="uid://btjcn3epryu1l" path="res://Assets/Items/potato.png" id="2_xk22n"]
+[ext_resource type="Texture2D" uid="uid://cr564a6dadp34" path="res://Assets/Crops/potato_crop.png" id="4_dk8mr"]
+
+[sub_resource type="Resource" id="Resource_m3gqw"]
+script = ExtResource("1_dhr44")
+name = "Potato"
+texture = ExtResource("2_xk22n")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_023x2"]
+atlas = ExtResource("4_dk8mr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlbks"]
+atlas = ExtResource("4_dk8mr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsygb"]
+atlas = ExtResource("4_dk8mr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmrgb"]
+atlas = ExtResource("4_dk8mr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejkcl"]
+atlas = ExtResource("4_dk8mr")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvq6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_023x2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlbks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsygb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmrgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejkcl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_023x2")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlbks")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsygb")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmrgb")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejkcl")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_b2o5d")
+crop_name = "potato_crop"
+sprite_frames = SubResource("SpriteFrames_yvq6e")
+harvest_item = SubResource("Resource_m3gqw")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

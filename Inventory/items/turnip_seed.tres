@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://dcgfbp0lcc4vg"]
 
+[ext_resource type="Resource" uid="uid://c18m5kf3o55fj" path="res://Inventory/crops/turnip_crop.tres" id="1_87vh8"]
 [ext_resource type="Texture2D" uid="uid://dk8dkg4itbkjw" path="res://Assets/Items/turnip_seeds.png" id="1_r5oqn"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_xlfhh"]
 
@@ -7,3 +8,4 @@
 script = ExtResource("1_xlfhh")
 name = "Turnip Seeds"
 texture = ExtResource("1_r5oqn")
+crop_data = ExtResource("1_87vh8")

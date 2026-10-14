@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://d0gdke44uwo60"]
+
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_0aoxm"]
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_nuti5"]
+[ext_resource type="Texture2D" uid="uid://cicr2k8shb0qp" path="res://Assets/Items/sunflower.png" id="2_lxsnh"]
+[ext_resource type="Texture2D" uid="uid://jfx0jft4siwe" path="res://Assets/Crops/sunflower_crop.png" id="4_2vxfq"]
+
+[sub_resource type="Resource" id="Resource_n2mt0"]
+script = ExtResource("1_0aoxm")
+name = "Sunflower"
+texture = ExtResource("2_lxsnh")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2tct"]
+atlas = ExtResource("4_2vxfq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq36h"]
+atlas = ExtResource("4_2vxfq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g588c"]
+atlas = ExtResource("4_2vxfq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4v1l"]
+atlas = ExtResource("4_2vxfq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrbrp"]
+atlas = ExtResource("4_2vxfq")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41w8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2tct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq36h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g588c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4v1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrbrp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2tct")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq36h")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g588c")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4v1l")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrbrp")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_nuti5")
+crop_name = "sunflower_crop"
+sprite_frames = SubResource("SpriteFrames_41w8s")
+harvest_item = SubResource("Resource_n2mt0")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

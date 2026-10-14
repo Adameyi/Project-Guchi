@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://dxpfkf7ws3tst"]
+
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_6g252"]
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_sgevs"]
+[ext_resource type="Texture2D" uid="uid://5t38p87evol1" path="res://Assets/Items/magicberry.png" id="2_n7gjk"]
+[ext_resource type="Texture2D" uid="uid://dpwf8vj6c03g6" path="res://Assets/Crops/magicberry_crop.png" id="4_ipjiv"]
+
+[sub_resource type="Resource" id="Resource_nsja1"]
+script = ExtResource("1_sgevs")
+name = "Magicberry"
+texture = ExtResource("2_n7gjk")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd7k3"]
+atlas = ExtResource("4_ipjiv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jkfw"]
+atlas = ExtResource("4_ipjiv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rul5f"]
+atlas = ExtResource("4_ipjiv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk8tr"]
+atlas = ExtResource("4_ipjiv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrr5j"]
+atlas = ExtResource("4_ipjiv")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8bd1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd7k3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jkfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rul5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk8tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrr5j")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd7k3")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jkfw")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rul5f")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk8tr")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrr5j")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_6g252")
+crop_name = "magicberry_crop"
+sprite_frames = SubResource("SpriteFrames_w8bd1")
+harvest_item = SubResource("Resource_nsja1")
+harvest_amount = 1
+metadata/_custom_type_script = "uid://py2h5mslfx20"

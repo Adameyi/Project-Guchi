@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed:float = 100.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var inventory: Inventory = preload('res://inventory/player_inventory.tres')
+@onready var inventory: Inventory = preload('res://Inventory/player_inventory.tres')
 
 func _ready() -> void:
 	pass

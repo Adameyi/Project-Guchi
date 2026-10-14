@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bj6ndgnl5fy2t" path="res://Assets/Items/magicberry_seeds.png" id="1_7ewt7"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_28fa8"]
+[ext_resource type="Resource" uid="uid://dxpfkf7ws3tst" path="res://Inventory/crops/magicberry_crop.tres" id="1_l4mf3"]
 
 [resource]
 script = ExtResource("1_28fa8")
 name = "Magicberry Seeds"
 texture = ExtResource("1_7ewt7")
+crop_data = ExtResource("1_l4mf3")

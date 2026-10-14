@@ -1,11 +1,8 @@
 extends Node2D
 
 @onready var tool_ui_slot: TextureButton = $"../Player/CharacterBody2D/Hotbar/Tool_Slot/Tool_UI_Slot"
-@onready var inventory: Inventory = preload('res://inventory/player_inventory.tres')
+@onready var inventory: Inventory = preload('res://Inventory/player_inventory.tres')
 @onready var hotbar_slots = $"../Player/CharacterBody2D/Hotbar/Slots"
-
-const SUNFLOWER_SEED = preload("uid://cmbrlfmdn2o2g")
-const SUNFLOWER_CROP_DATA = preload("res://Inventory/items/sunflower_seed.tres")
 
 @onready var grass: TileMapLayer = $Grass
 @onready var dirt: TileMapLayer = $Dirt
@@ -73,19 +70,31 @@ func water_crop(tile_coords: Vector2i):
 			crop.watered()
 			
 func plant_seed(tile_coords: Vector2i):
-		
+		print('--Seed Planting--')
 		if not planted_crops.has(tile_coords):
+			print('STOP: No soil at, ', tile_coords)
 			return 
 		var crop = planted_crops[tile_coords]
 		if crop.is_planted:
+			print('STOP: Crop already planted')
 			return
 		
 		var slot = inventory.slots[hotbar_slots.selected_index]
-		if slot.item != SUNFLOWER_SEED or slot.amount <= 0:
+		print('Selected Index: ', hotbar_slots.selected_index, " item: ", slot.item , " amount: ", slot.amount)
+		if slot.item == null or slot.amount <= 0:
+			print('STOP: Empty Slot (Wrong Index?)')
 			return
 		
-		# Plant and use up seed
-		crop.plant(SUNFLOWER_CROP_DATA)	
+		# Not a seed? Item has no crop attached, so do nothing.
+		
+		var data: CropData = slot.item.crop_data
+		print('crop data info: ', data)
+		if data == null:
+			print('STOP: Item has no crop_data')
+			return
+			
+		crop.plant(data)
+		print('--Seed Planted!--')
 		slot.amount -= 1
 		if slot.amount <= 0:
 			slot.item = null
@@ -98,5 +107,7 @@ func harvest_crop(tile_coords: Vector2i) -> void:
 	crop.reset_to_soil()
 	
 func remove_crop(tile_coords: Vector2i) -> void:
+	if not planted_crops.has(tile_coords):
+		return
 	var crop = planted_crops[tile_coords]
 	crop.reset_to_soil()

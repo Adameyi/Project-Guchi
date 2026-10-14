@@ -9,6 +9,8 @@ var loaded_resource: PackedScene
 var scene_path: String
 var progress: Array = []
 
+var next_spawn: StringName = &""
+
 #Resource loader will try to load a scene using multiple threads in the background. 
 var use_sub_threads: bool = true
 

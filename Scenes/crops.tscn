@@ -2,11 +2,22 @@
 
 [ext_resource type="Script" uid="uid://4sq3qghoj75j" path="res://Scripts/crop.gd" id="1_3jk42"]
 [ext_resource type="Texture2D" uid="uid://bx272f4dqggk6" path="res://Assets/Crops/pumpkin_crop.png" id="2_1sjif"]
-[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="2_oo5g5"]
+[ext_resource type="Texture2D" uid="uid://d3tgwniea22nd" path="res://Assets/Crops/empty_crop.png" id="4_n37hk"]
 
-[sub_resource type="Resource" id="Resource_olfyc"]
-script = ExtResource("2_oo5g5")
-metadata/_custom_type_script = "uid://py2h5mslfx20"
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fyap"]
+atlas = ExtResource("4_n37hk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sjif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fyap")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo5g5"]
 atlas = ExtResource("2_1sjif")
@@ -46,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hcch8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"full_animation",
 "speed": 5.0
 }, {
@@ -54,7 +65,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oo5g5")
 }],
-"loop": true,
+"loop": 1,
 "name": &"stage_0",
 "speed": 5.0
 }, {
@@ -62,7 +73,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_olfyc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"stage_1",
 "speed": 5.0
 }, {
@@ -70,7 +81,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n37hk")
 }],
-"loop": true,
+"loop": 1,
 "name": &"stage_2",
 "speed": 5.0
 }, {
@@ -78,7 +89,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wnwh1")
 }],
-"loop": true,
+"loop": 1,
 "name": &"stage_3",
 "speed": 5.0
 }, {
@@ -86,14 +97,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hcch8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"stage_4",
 "speed": 5.0
 }]
 
 [node name="Crop" type="Node2D" unique_id=489149136]
 script = ExtResource("1_3jk42")
-crop_data = SubResource("Resource_olfyc")
+soil_frame = SubResource("SpriteFrames_1sjif")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1340793404]
 texture_filter = 1

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://cmbrlfmdn2o2g"]
 
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_4i7fv"]
+[ext_resource type="Resource" uid="uid://d0gdke44uwo60" path="res://Inventory/crops/sunflower_crop.tres" id="1_fawun"]
 [ext_resource type="Texture2D" uid="uid://cypdiim6qwvse" path="res://Assets/Items/sunflower_seeds.png" id="2_5qbqs"]
 
 [resource]
 script = ExtResource("1_4i7fv")
 name = "sunflower_seed"
 texture = ExtResource("2_5qbqs")
+crop_data = ExtResource("1_fawun")

@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://bm7602wnnie7e"]
+
+[ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_811no"]
+[ext_resource type="Script" uid="uid://py2h5mslfx20" path="res://Scripts/crop_data.gd" id="1_kuyph"]
+[ext_resource type="Texture2D" uid="uid://jf2fedogmpqc" path="res://Assets/Items/pumpkin.png" id="2_7cade"]
+[ext_resource type="Texture2D" uid="uid://bx272f4dqggk6" path="res://Assets/Crops/pumpkin_crop.png" id="4_8owjv"]
+
+[sub_resource type="Resource" id="Resource_aqlfu"]
+script = ExtResource("1_811no")
+name = "Pumpkin"
+texture = ExtResource("2_7cade")
+metadata/_custom_type_script = "uid://cvl87os6lniip"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vai7"]
+atlas = ExtResource("4_8owjv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0lfu"]
+atlas = ExtResource("4_8owjv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmfh1"]
+atlas = ExtResource("4_8owjv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7yr5"]
+atlas = ExtResource("4_8owjv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndxnj"]
+atlas = ExtResource("4_8owjv")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fm66o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vai7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0lfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmfh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7yr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndxnj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vai7")
+}],
+"loop": 1,
+"name": &"stage_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0lfu")
+}],
+"loop": 1,
+"name": &"stage_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmfh1")
+}],
+"loop": 1,
+"name": &"stage_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7yr5")
+}],
+"loop": 1,
+"name": &"stage_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndxnj")
+}],
+"loop": 1,
+"name": &"stage_4",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_kuyph")
+crop_name = "pumpkin_crop"
+sprite_frames = SubResource("SpriteFrames_fm66o")
+harvest_item = SubResource("Resource_aqlfu")
+metadata/_custom_type_script = "uid://py2h5mslfx20"

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://bmcrcqb507u1m"]
 
 [ext_resource type="Texture2D" uid="uid://soewm2177ldt" path="res://Assets/Items/cauliflower_seeds.png" id="1_q8xmo"]
+[ext_resource type="Resource" uid="uid://csf3s5q0wlnrb" path="res://Inventory/crops/cauliflower_crop.tres" id="1_r07l7"]
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_yj24h"]
 
 [resource]
 script = ExtResource("1_yj24h")
 name = "Cauliflower Seeds"
 texture = ExtResource("1_q8xmo")
+crop_data = ExtResource("1_r07l7")

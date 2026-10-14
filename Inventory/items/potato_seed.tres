@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_2dt6p"]
 [ext_resource type="Texture2D" uid="uid://ct22kipb4o5da" path="res://Assets/Items/potato_speeds.png" id="1_3aqwe"]
+[ext_resource type="Resource" uid="uid://c4skye0m1fukd" path="res://Inventory/crops/potato_crop.tres" id="1_d2acb"]
 
 [resource]
 script = ExtResource("1_2dt6p")
 name = "Potato Seeds"
 texture = ExtResource("1_3aqwe")
+crop_data = ExtResource("1_d2acb")

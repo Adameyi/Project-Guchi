@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Inventory_Item" format=3 uid="uid://ydcdt8spqdnd"]
 
 [ext_resource type="Script" uid="uid://cvl87os6lniip" path="res://Inventory/item_inventory.gd" id="1_f6r3s"]
+[ext_resource type="Resource" uid="uid://bm7602wnnie7e" path="res://Inventory/crops/pumpkin_crop.tres" id="1_sbo67"]
 [ext_resource type="Texture2D" uid="uid://wooc5ng8xm0o" path="res://Assets/Items/pumpkin_seeds.png" id="1_yk2r6"]
 
 [resource]
 script = ExtResource("1_f6r3s")
 name = "Pumpkin Seeds"
 texture = ExtResource("1_yk2r6")
+crop_data = ExtResource("1_sbo67")

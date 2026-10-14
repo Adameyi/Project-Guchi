@@ -68,6 +68,12 @@ interact_type = 1
 [node name="Interactable" parent="GuchiNPC" index="2" unique_id=528876910]
 interact_name = "Interact"
 
+[node name="Door" parent="." unique_id=428362996 instance=ExtResource("3_3mbjb")]
+position = Vector2(-24, -8)
+scale = Vector2(0.5, 0.5)
+initial_scene = &"uid://bhnl8hn71jrhp"
+spawn_point = &"ShopExit"
+
 [node name="ShopUI" type="CanvasLayer" parent="." unique_id=2125886908]
 
 [node name="Shop" type="Control" parent="ShopUI" unique_id=755994421]
