@@ -31,6 +31,7 @@ func _ready() -> void:
 			var node := _item_nodes[i]
 			node.set_data(item_datas[i])
 			node.buy_pressed.connect(_on_buy_button_pressed)
+			node.sell_pressed.connect(_on_sell_button_pressed)
 			node.show()
 		
 		else:
@@ -50,6 +51,10 @@ func _exit_shop() -> void:
 func _on_buy_button_pressed(item_id: StringName) -> void:
 	print('Buying item: ', item_id)
 	Economy.buy_item(item_id)
+
+func _on_sell_button_pressed(item_id: StringName) -> void:
+	print('Selling item: ', item_id)
+	Economy.sell_item(item_id)
 
 func _on_balance_changed(new_balance: int):
 	player_money.text = str(new_balance)

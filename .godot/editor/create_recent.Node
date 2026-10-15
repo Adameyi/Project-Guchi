@@ -1,10 +1,10 @@
+TextureButton
+HBoxContainer
 Timer
 Label
-TextureButton
 ColorRect
 MarginContainer
 LineEdit
-HBoxContainer
 VBoxContainer
 TextureRect
 Control
@@ -12,4 +12,3 @@ CanvasLayer
 ScrollContainer
 PanelContainer
 Container
-Panel

@@ -13,6 +13,7 @@ var is_watered := false
 var crop_data: CropData = null
 
 func _ready() -> void:
+	water.hide()
 	_show_soil()
 
 func _show_soil() -> void:

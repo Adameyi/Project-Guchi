@@ -21,3 +21,29 @@ func insert(item: Inventory_Item, emit_signal:bool=true):
 			emptyslots[0].amount = 1
 	if emit_signal:
 		update.emit()
+		
+func remove(item: Inventory_Item, amount: int=1, emit_signal:bool=true) -> bool:
+		#Count how many the player has across all slots.
+		var total := 0
+		for slot in slots:
+			if slot.item == item:
+				total += slot.amount
+			if total < amount:
+				return false
+				
+		#Take from slots until enough is removed
+		var remaining := amount
+		for slot in slots:
+			if remaining <= 0:
+				break
+			if slot.item != item:
+				continue
+			var taken:= mini(slot.amount, remaining)
+			slot.amount -= taken
+			remaining -= taken
+			if slot.amount <= 0:
+				slot.item = null
+				slot.amount = 0
+		if emit_signal:
+			update.emit()
+		return true

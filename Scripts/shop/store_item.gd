@@ -2,6 +2,7 @@ class_name StoreItem
 extends VBoxContainer
 
 signal buy_pressed(item_id: StringName)
+signal sell_pressed(item_id: StringName)
 @onready var store_item_stock: Label = $StoreItemBackground/MarginContainer/StoreItemStock
 @onready var store_item_image: TextureRect = $StoreItemBackground/MarginContainer2/StoreItemImage
 @onready var store_item_label: Label = $HBoxContainer/StoreItemLabel
@@ -27,6 +28,9 @@ func _update_stock_display() -> void:
 
 func _on_buy_button_pressed() -> void:
 	buy_pressed.emit(_data.id)
+
+func _on_sell_button_pressed() -> void:
+	sell_pressed.emit(_data.id)
 
 func _on_stock_update(item_id: StringName, new_stock: int) -> void:
 	if item_id == _data.id:
